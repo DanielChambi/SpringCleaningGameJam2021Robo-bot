@@ -29,8 +29,8 @@ public class BHProjectile : MonoBehaviour
         }
     }
 
-    /*Default movement pattern for projectile*/
-    void ProjectileMovement()
+    /*Default movement pattern for projectile. Function to be rewritten in child projectile clases.*/
+    protected virtual void ProjectileMovement()
     {
         transform.Translate(Vector3.up * default_y_speed * Time.deltaTime, Space.World);
     }

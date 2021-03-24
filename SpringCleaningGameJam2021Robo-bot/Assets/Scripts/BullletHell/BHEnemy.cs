@@ -8,6 +8,7 @@ public class BHEnemy : MonoBehaviour
 
     float hp = 10;
 
+    public GameObject currentProjectile;
     void Start()
     {
         
@@ -16,15 +17,24 @@ public class BHEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ManageMovement();    
+        MovementPath();    
     }
 
-    void ManageMovement()
+    /*Default movement and shooting behaivour for enemies. To be rewritten by child enemy classes*/
+    protected virtual void MovementPath()
     {
-        /*Default movemetn path for enemies*/
         Vector3 pos = transform.position;
-        pos.x = Mathf.Sin(Time.time * 5);
+        pos.x = Mathf.Sin(Time.time * 5) * 2;
+        if(Mathf.Abs(pos.x) <= 0.1)
+        {
+            Shoot();
+        }
         transform.position = pos;
+    }
+
+    protected virtual void Shoot()
+    {
+        GameObject.Instantiate(currentProjectile, transform.position, Quaternion.identity);
     }
     
     private void OnTriggerEnter2D(Collider2D collision)

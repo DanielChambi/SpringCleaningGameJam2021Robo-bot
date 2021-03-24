@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BHPlayer : MonoBehaviour
 {
     public float max_speed = 5;
     public float acceleration = 1;
+
+    public float hp = 20;
 
     public float shootDelay = 10f; //delay between shots in seconds
     float shootTimer;
@@ -86,4 +89,29 @@ public class BHPlayer : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "EnemyProjectile")
+        {
+            BHProjectile projectile = collision.transform.GetComponent<BHProjectile>();
+            ReceiveDamage(projectile.Damage());
+            Destroy(collision.transform.gameObject);
+        }
+    }
+
+    void ReceiveDamage(float damage)
+    {
+        hp -= damage;
+        if(hp <= 0)
+        {
+            PlayerDestroy();
+        }
+    }
+
+    void PlayerDestroy()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().path, LoadSceneMode.Single);
+    }
 }
+
