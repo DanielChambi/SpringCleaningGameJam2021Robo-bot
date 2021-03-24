@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: f434f3aaf4a3988498808dab468f0539
+  - enabled: 1
+    path: Assets/Scenes/BulletHell/BulletHellScene.unity
+    guid: 899fb68f38a2edd4397f8a40a40a5c36
+  - enabled: 1
+    path: Assets/Scenes/Platformer/PlatformerScene1.unity
+    guid: 8ad687219631d264d995feb04b02d07b
+  - enabled: 1
+    path: Assets/Scenes/RPG/RPGScene1.unity
+    guid: 4781708849bacba44844d51906b47a0e
   m_configObjects: {}
