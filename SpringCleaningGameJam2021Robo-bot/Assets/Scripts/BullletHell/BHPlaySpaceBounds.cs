@@ -10,8 +10,7 @@ public class BHPlaySpaceBounds : MonoBehaviour
 
     public float playSpaceAspect = 9/16;   // (width / height) of determined play space
 
-    Bounds playSpaceBounds;
-
+    static Bounds playSpaceBounds;
 
     void Start()
     {
@@ -24,7 +23,7 @@ public class BHPlaySpaceBounds : MonoBehaviour
         playSpaceBounds = new Bounds(cameraBounds.center, playSpaceSize);
     }
 
-    public Bounds GetBounds()
+    public static Bounds Bounds()
     {
         return playSpaceBounds;
     }
