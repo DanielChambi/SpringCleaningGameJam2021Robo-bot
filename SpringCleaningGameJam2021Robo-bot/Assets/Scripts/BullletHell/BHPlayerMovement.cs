@@ -7,6 +7,8 @@ public class BHPlayerMovement : MonoBehaviour
     public float max_speed = 5;
     public float acceleration = 1;
     
+    public BHPlaySpaceBounds playSpaceController;
+
     Vector2 velocity;
 
     float x_axis;
@@ -20,6 +22,7 @@ public class BHPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //update velocity
         x_axis = Input.GetAxis("Horizontal");
         y_axis = Input.GetAxis("Vertical");
 
@@ -40,10 +43,17 @@ public class BHPlayerMovement : MonoBehaviour
         }
         
 
-
+        //apply velocity
         velocity.x = Mathf.Clamp(velocity.x, -max_speed, max_speed);
         velocity.y = Mathf.Clamp(velocity.y, -max_speed, max_speed);
 
         transform.Translate(velocity * Time.deltaTime, Space.World);
+
+        //limit movements to play space bounds
+        Bounds bounds = playSpaceController.GetBounds();
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Clamp(newPosition.x, bounds.min.x, bounds.max.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, bounds.min.y, bounds.max.y);
+        transform.position = newPosition;
     }
 }
