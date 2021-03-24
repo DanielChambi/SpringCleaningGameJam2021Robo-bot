@@ -71,7 +71,7 @@ public class BHPlayer : MonoBehaviour
 
     void ManageShooting()
     {
-        if(shootTimer > 0)
+        if (shootTimer > 0)
         {
             shootTimer -= Time.deltaTime;
             if (shootTimer < 0) shootTimer = 0;

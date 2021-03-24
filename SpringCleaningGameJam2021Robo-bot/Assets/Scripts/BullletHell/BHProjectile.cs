@@ -6,6 +6,7 @@ public class BHProjectile : MonoBehaviour
 {
     /*Base class for all projectiles in Bullet Hell*/
     public float default_y_speed = 7;
+    public float damage = 1;    //damage points the projectile does on contact
 
     float y_bounds_buffer = 1.5f;
     void Start()
@@ -32,5 +33,11 @@ public class BHProjectile : MonoBehaviour
     void ProjectileMovement()
     {
         transform.Translate(Vector3.up * default_y_speed * Time.deltaTime, Space.World);
+    }
+
+    /*Get damage points this projectile deals*/
+    public float Damage()
+    {
+        return damage;
     }
 }
