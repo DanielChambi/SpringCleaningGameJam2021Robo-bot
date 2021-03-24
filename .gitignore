@@ -2,7 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
+/SpringCleaningGameJam2021Robo-bot/[Ll]ibrary/
 /SpringCleaningGameJam2021Robo-bot/[Tt]emp/
 /SpringCleaningGameJam2021Robo-bot/[Oo]bj/
 /SpringCleaningGameJam2021Robo-bot/[Bb]uild/
