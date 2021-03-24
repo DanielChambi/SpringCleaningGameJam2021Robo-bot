@@ -7,13 +7,15 @@ public class BHPlayer : MonoBehaviour
     public float max_speed = 5;
     public float acceleration = 1;
 
-    public float shootDelay = 0.5f; //delay between shots in seconds
+    public float shootDelay = 10f; //delay between shots in seconds
     float shootTimer;
     
     Vector2 velocity;
 
     float x_axis;
     float y_axis;
+
+    public GameObject currentProjectile;
 
     void Start()
     {
@@ -79,7 +81,7 @@ public class BHPlayer : MonoBehaviour
         {
             if(shootTimer == 0)
             {
-                Debug.Log("pweew");
+                GameObject.Instantiate(currentProjectile, transform.position, Quaternion.identity);
                 shootTimer = shootDelay;
             }
         }

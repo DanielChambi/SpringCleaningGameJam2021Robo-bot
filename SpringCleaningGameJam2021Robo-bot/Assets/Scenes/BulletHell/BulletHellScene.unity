@@ -446,7 +446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_speed: 10
   acceleration: 2
-  playSpaceController: {fileID: 871197470}
+  shootDelay: 0.1
+  currentProjectile: {fileID: 8714129952044106600, guid: 952ca4a88f5b08a44bd8c1b4658a5ca7, type: 3}
 --- !u!58 &1606343064
 CircleCollider2D:
   m_ObjectHideFlags: 0
