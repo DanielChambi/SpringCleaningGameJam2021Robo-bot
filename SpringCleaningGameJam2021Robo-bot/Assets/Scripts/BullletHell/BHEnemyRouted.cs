@@ -54,6 +54,10 @@ public class BHEnemyRouted : BHEnemy
 
     protected override void EnemyDestroy()
     {
-        Destroy(transform.parent.gameObject);
+        Transform parent = transform.parent;
+        transform.parent = null;
+        Destroy(parent.gameObject);
+
+        base.EnemyDestroy();
     }
 }

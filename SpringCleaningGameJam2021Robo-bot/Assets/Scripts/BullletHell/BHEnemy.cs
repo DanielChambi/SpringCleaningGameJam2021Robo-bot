@@ -11,8 +11,12 @@ public class BHEnemy : MonoBehaviour
     protected float default_speed = 5;
 
     public GameObject currentProjectile;
+
+    BHEnemyController enemyController;
+
     void Start()
     {
+        enemyController = GameObject.Find("BHEnemyController").GetComponent<BHEnemyController>();
         SetUp();
     }
 
@@ -66,6 +70,7 @@ public class BHEnemy : MonoBehaviour
 
     protected virtual void EnemyDestroy()
     {
+        enemyController.EnemyDestroyed();
         Destroy(gameObject);
     }
 }
