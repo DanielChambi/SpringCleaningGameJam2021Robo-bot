@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6131490108984925839}
   - component: {fileID: 5311966791206984596}
   - component: {fileID: 3943383929751075075}
-  - component: {fileID: -5293288635134650510}
+  - component: {fileID: 9084983675381306508}
   m_Layer: 0
-  m_Name: BHEnemy
+  m_Name: BHEnemyRouted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-5293288635134650510
+--- !u!114 &9084983675381306508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6131490108984925833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40307681bbb3e5a4b9d9f7024e802038, type: 3}
+  m_Script: {fileID: 11500000, guid: fde7a064edfeb094f938b249789e08ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentProjectile: {fileID: 7419511101816827370, guid: fb68900258526014fb406a466e2cfe00, type: 3}
+  route: {fileID: 0}

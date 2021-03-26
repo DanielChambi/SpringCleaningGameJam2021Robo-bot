@@ -8,10 +8,12 @@ public class BHEnemy : MonoBehaviour
 
     float hp = 10;
 
+    protected float default_speed = 5;
+
     public GameObject currentProjectile;
     void Start()
     {
-        
+        SetUp();
     }
 
     // Update is called once per frame
@@ -20,11 +22,16 @@ public class BHEnemy : MonoBehaviour
         MovementPath();    
     }
 
+    protected virtual void SetUp()
+    {
+        // wizard ->  <|:)
+    }
+
     /*Default movement and shooting behaivour for enemies. To be rewritten by child enemy classes*/
     protected virtual void MovementPath()
     {
         Vector3 pos = transform.position;
-        pos.x = Mathf.Sin(Time.time * 5) * 2;
+        pos.x = Mathf.Sin(Time.time * default_speed) * 2;
         if(Mathf.Abs(pos.x) <= 0.1)
         {
             Shoot();
@@ -57,7 +64,7 @@ public class BHEnemy : MonoBehaviour
         }
     }
 
-    void EnemyDestroy()
+    protected virtual void EnemyDestroy()
     {
         Destroy(gameObject);
     }
