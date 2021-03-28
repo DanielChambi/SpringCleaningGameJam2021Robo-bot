@@ -6,11 +6,12 @@ public class RPGPlayer : MonoBehaviour
 {
     public float moveSpeed = 10;
     public float gravity = 20;
-    public float stepSize = 0.5f;
+    public float stepSize = 2f;
 
     float stepDistance = 0;
 
     CharacterController characterController;
+    public RPGOverWorldController overWorldController;
 
     Vector3 moveDirection;
 
@@ -56,8 +57,10 @@ public class RPGPlayer : MonoBehaviour
 
         if(stepDistance >= stepSize)
         {
-            Debug.Log("Step");
             stepDistance = 0;
+
+            int t =overWorldController.PlayerSteps();
+            Debug.Log(t);
         }
 
         prevPosition = transform.position;
