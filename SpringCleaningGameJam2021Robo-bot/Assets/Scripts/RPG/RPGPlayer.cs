@@ -6,10 +6,15 @@ public class RPGPlayer : MonoBehaviour
 {
     public float moveSpeed = 10;
     public float gravity = 20;
+    public float stepSize = 0.5f;
+
+    float stepDistance = 0;
 
     CharacterController characterController;
 
     Vector3 moveDirection;
+
+    Vector3 prevPosition;
 
     float x_axis;
     float y_axis;
@@ -17,6 +22,7 @@ public class RPGPlayer : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        prevPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -33,7 +39,6 @@ public class RPGPlayer : MonoBehaviour
         }
 
         Vector3 inputDirection = new Vector3(x_axis, 0, y_axis);
-        Vector3 transformDirection = transform.TransformDirection(inputDirection);
 
         Vector3 flatMovement = transform.TransformDirection(inputDirection) * moveSpeed * Time.deltaTime;
 
@@ -42,5 +47,19 @@ public class RPGPlayer : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         characterController.Move(moveDirection);
+
+        //Calculate step
+        Vector2 pos = new Vector2(transform.position.x, transform.position.z);
+        Vector2 prevPos = new Vector2(prevPosition.x, prevPosition.z);
+
+        stepDistance += Vector2.Distance(pos, prevPos);
+
+        if(stepDistance >= stepSize)
+        {
+            Debug.Log("Step");
+            stepDistance = 0;
+        }
+
+        prevPosition = transform.position;
     }
 }
