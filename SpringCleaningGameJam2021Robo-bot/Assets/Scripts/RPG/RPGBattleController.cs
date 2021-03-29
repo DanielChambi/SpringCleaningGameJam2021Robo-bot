@@ -35,8 +35,6 @@ public class RPGBattleController : MonoBehaviour
                 UpdateBattleLost();
                 break;
         }
-
-
     }
 
     void UpdatePlayerTurn()
@@ -115,7 +113,7 @@ public class RPGBattleController : MonoBehaviour
 
     void OpenPlayerAttackMenu(ActionCode action)
     {
-        Debug.Log("Opening player attack");
+        //Debug.Log("Opening player attack");
         action.target.SetActive(true);
         action.target.GetComponent<RPGMenu>().prevMenu = currentMenu;
         currentMenu = action.target.GetComponent<RPGMenu>();
@@ -154,6 +152,8 @@ public class RPGBattleController : MonoBehaviour
         //Debug.Log("Player blocking");
 
         player.GetComponent<RPGPlayerBattle>().PlayerBlock();
+
+        PlayerPassTurn();
     }
 
     void EnemyAttack(ActionCode action)
@@ -162,24 +162,93 @@ public class RPGBattleController : MonoBehaviour
     }
 
 
+
     void PlayerPassTurn()
     {
-        state = BattleState.EnemyTurn;
-
         //collapse menus back to Default Menu
         while (!(currentMenu is RPGMenuDefault))
         {
             MenuGoBack();
         }
 
-        enemy.GetComponent<RPGUnit>().UnitSetUp();
+        BattleUpdateWinLoseState();
+
+        //if battle state did not change to battle won/lost:
+        if (state == BattleState.PlayerTurn)
+        {
+            state = BattleState.EnemyTurn;
+
+            enemy.GetComponent<RPGUnit>().UnitSetUp();
+        }
     }
 
     void EnemyPassTurn()
     {
-        state = BattleState.PlayerTurn;
-        player.GetComponent<RPGUnit>().UnitSetUp();
+        BattleUpdateWinLoseState();
+
+        //if battle state did not change to battle won/lost:
+        if (state == BattleState.EnemyTurn)
+        {
+            state = BattleState.PlayerTurn;
+            player.GetComponent<RPGUnit>().UnitSetUp();
+        }
+
     }
+
+    /*Checks win/loss condition and update state*/
+    bool BattleUpdateWinLoseState()
+    {
+        bool win = CheckWinCondition();
+        bool lose = CheckLoseCondition();
+
+        if (win)
+        {
+            BattleWon();
+        }else if (lose)
+        {
+            BattleLost();
+        }
+
+        return win || lose;
+    }
+
+    bool CheckWinCondition()
+    {
+        bool win = false;
+
+        if (enemy.GetComponent<RPGUnit>().State() == RPGUnit.UnitState.Out)
+        {
+            win = true;
+        }
+
+        return win;
+    }
+
+    bool CheckLoseCondition() 
+    {
+        bool lose = false;
+        if(player.GetComponent<RPGUnit>().State() == RPGUnit.UnitState.Out)
+        {
+            lose = true;
+        }
+
+        return lose;
+    }
+
+    void BattleWon()
+    {
+        Debug.Log("Battle won! :)");
+        state = BattleState.BattleWon;
+    }
+
+    void BattleLost()
+    {
+        Debug.Log("Battle Lost! :(");
+        state = BattleState.BattleLost;
+    }
+
+    
+
 
     public enum BattleState
     {

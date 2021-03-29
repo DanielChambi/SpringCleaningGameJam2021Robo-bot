@@ -75,6 +75,11 @@ public class RPGUnit : MonoBehaviour
         Debug.Log("Unit " + gameObject.name + " knocked out");
     }
 
+    public UnitState State()
+    {
+        return state;
+    }
+
     protected struct Attack
     {
         public string name { get; }
@@ -94,7 +99,7 @@ public class RPGUnit : MonoBehaviour
 
     }
 
-    protected enum UnitState
+    public enum UnitState
     {
         Null,
         Ready,
