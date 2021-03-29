@@ -73,6 +73,7 @@ public class RPGUnit : MonoBehaviour
     {
         state = UnitState.Out;
         Debug.Log("Unit " + gameObject.name + " knocked out");
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public UnitState State()

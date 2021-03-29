@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RPGBattleController : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class RPGBattleController : MonoBehaviour
 
     BattleState state;
 
+    bool coroutineEnable;
+
     void Start()
     {
+        coroutineEnable = true;
         state = BattleState.PlayerTurn;
     }
 
@@ -72,12 +76,20 @@ public class RPGBattleController : MonoBehaviour
 
     void UpdateBattleWon()
     {
-
+        if (coroutineEnable)
+        {
+            coroutineEnable = false;
+            StartCoroutine(ExitBattle());
+        }
     }
 
     void UpdateBattleLost()
     {
-
+        if (coroutineEnable)
+        {
+            coroutineEnable = false;
+            StartCoroutine(ExitBattle());
+        }
     }
 
 
@@ -132,6 +144,11 @@ public class RPGBattleController : MonoBehaviour
     void RunAway()
     {
         Debug.Log("Running away");
+        if (coroutineEnable)
+        {
+            coroutineEnable = false;
+            StartCoroutine(ExitBattle());
+        }
     }
 
     void PlayerAttack(ActionCode action)
@@ -248,6 +265,18 @@ public class RPGBattleController : MonoBehaviour
     }
 
     
+    IEnumerator ExitBattle()
+    {
+        yield return new WaitForSeconds(5);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(RPGOverWorldController.overworldScene);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
 
 
     public enum BattleState

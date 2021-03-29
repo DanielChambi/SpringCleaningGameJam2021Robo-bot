@@ -13,15 +13,15 @@ public class RPGOverWorldController : MonoBehaviour
 
     //Information of last loaded scene: player position and scene path
     public static Vector3 playerPos;
-    public static string overworldScene;
+    public static string overworldScene = "Scenes/RPG/RPGOverworld";
 
     string randomEncounterScene = "Scenes/RPG/RPGBattle";
 
     void Start()
     {
-        if (playerPos != null)
+        if (playerPos != Vector3.zero)
         {
-            player.transform.position = playerPos;
+            player.GetComponent<RPGPlayer>().SetStartPosition(playerPos);
         }    
     }
 

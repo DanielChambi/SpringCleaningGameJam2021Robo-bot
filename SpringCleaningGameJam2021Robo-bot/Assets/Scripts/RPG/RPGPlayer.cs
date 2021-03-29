@@ -13,6 +13,7 @@ public class RPGPlayer : MonoBehaviour
     CharacterController characterController;
     public RPGOverWorldController overWorldController;
 
+    Vector3 startPos;
     Vector3 moveDirection;
 
     Vector3 prevPosition;
@@ -23,7 +24,14 @@ public class RPGPlayer : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        prevPosition = transform.position;
+        transform.position = RPGOverWorldController.playerPos;
+
+        if(startPos != Vector3.zero)
+        {
+            characterController.enabled = false;
+            transform.position = startPos;
+            characterController.enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -64,5 +72,10 @@ public class RPGPlayer : MonoBehaviour
         }
 
         prevPosition = transform.position;
+    }
+
+    public void SetStartPosition(Vector3 vector)
+    {
+        startPos = vector;
     }
 }
