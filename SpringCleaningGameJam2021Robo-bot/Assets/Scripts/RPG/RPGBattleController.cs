@@ -9,49 +9,64 @@ public class RPGBattleController : MonoBehaviour
 
     public RPGMenu currentMenu;
 
-
+    float inputDelay = 0.1f;
+    float inputTimer;
 
     void Start()
     {
-        
+        inputTimer = inputDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            currentMenu.MoveSelection(1);
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            currentMenu.MoveSelection(-1);
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+
+        if (Input.GetButtonDown("Vertical"))
+        {
+            float y_axis = Input.GetAxis("Vertical");
+            if (y_axis < 0 || y_axis > 0)
+            {
+                currentMenu.MoveSelection( -(int)Mathf.Sign(y_axis) );
+            }
+        }
+            
+
+       
+
+        if (Input.GetButtonDown("Submit"))
         {
             ParseActionCode(currentMenu.SelectOption());
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            ParseActionCode(new ActionCode(ActionCode.Action.MenuGoBack));
         }
     }
 
     void ParseActionCode(ActionCode action)
     {
-        switch (action.actionIndex){
+        switch (action.action){
             
-            case (int)ActionCode.Action.MenuSelectPlayerAttack:
-                OpenPlayerAttackMenu();
+            case ActionCode.Action.MenuSelectPlayerAttack:
+                OpenPlayerAttackMenu(action);
                 break;
-            case (int)ActionCode.Action.MenuRunAway:
+            case ActionCode.Action.MenuRunAway:
                 RunAway();
                 break;
-            case (int)ActionCode.Action.PlayerAttack:
+            case ActionCode.Action.PlayerAttack:
                 PlayerAttack(action);
                 break;
-            case (int)ActionCode.Action.PlayerBlock:
+            case ActionCode.Action.PlayerBlock:
                 PlayerBlock();
                 break;
-            case (int)ActionCode.Action.EnemyAttack:
+            case ActionCode.Action.EnemyAttack:
                 EnemyAttack(action);
+                break;
+            case ActionCode.Action.MenuGoBack:
+                MenuGoBack();
                 break;
             default:
                 Debug.Log("UntreatedAction");
@@ -61,9 +76,22 @@ public class RPGBattleController : MonoBehaviour
     }
 
 
-    void OpenPlayerAttackMenu()
+    void OpenPlayerAttackMenu(ActionCode action)
     {
         Debug.Log("Opening player attack");
+        action.target.SetActive(true);
+        action.target.GetComponent<RPGMenu>().prevMenu = currentMenu;
+        currentMenu = action.target.GetComponent<RPGMenu>();
+    }
+
+    void MenuGoBack()
+    {
+        if(!(currentMenu is RPGMenuDefault))
+        {
+            RPGMenu menu = currentMenu.prevMenu;
+            currentMenu.gameObject.SetActive(false);
+            currentMenu = menu;
+        }
     }
 
     void RunAway()

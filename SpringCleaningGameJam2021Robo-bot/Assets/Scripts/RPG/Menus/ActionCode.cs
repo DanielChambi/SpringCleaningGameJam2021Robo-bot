@@ -5,28 +5,28 @@ using UnityEngine;
 public struct ActionCode
 {
     public GameObject target { get; }
-    public int actionIndex { get;  }
+    public Action action { get;  }
     public int actionSubindex { get; } 
 
 
-    public ActionCode(int actionIndex)
+    public ActionCode(ActionCode.Action action)
     {
-        this.actionIndex = actionIndex;
+        this.action = action;
         this.target = null;
         actionSubindex = -1;
     }
 
-    public ActionCode(int actionIndex, int actionSubindex): this(actionIndex)
+    public ActionCode(ActionCode.Action action, int actionSubindex): this(action)
     {
         this.actionSubindex = actionSubindex;
     }
 
-    public ActionCode(int actionIndex, GameObject target): this(actionIndex)
+    public ActionCode(ActionCode.Action action, GameObject target): this(action)
     {
         this.target = target;
     }
 
-    public ActionCode(int actionIndex, int actionSubindex, GameObject target): this(actionIndex, actionSubindex)
+    public ActionCode(ActionCode.Action action, int actionSubindex, GameObject target): this(action, actionSubindex)
     {
         this.target = target;
     }

@@ -4,31 +4,33 @@ using UnityEngine;
 
 public class RPGMenuDefault : RPGMenu
 {
-    
+
+    public RPGMenu playerAttackMenu;
+
     public override ActionCode SelectOption()
     {
         switch (selectedOption)
         {
             case (int)DefaultOption.attack:
-                return new ActionCode((int)ActionCode.Action.MenuSelectPlayerAttack);
+                return new ActionCode(ActionCode.Action.MenuSelectPlayerAttack, playerAttackMenu.gameObject);
                 break;
 
             case (int)DefaultOption.block:
-                return new ActionCode((int)ActionCode.Action.PlayerBlock);
+                return new ActionCode(ActionCode.Action.PlayerBlock);
                 break;
             case (int)DefaultOption.run:
-                return new ActionCode((int)ActionCode.Action.MenuRunAway);
+                return new ActionCode(ActionCode.Action.MenuRunAway);
 
             default:
-                return new ActionCode((int)ActionCode.Action.Null);
+                return new ActionCode(ActionCode.Action.Null);
                 break;
         }
     }
 
     enum DefaultOption
     {
-        attack = 0,
-        block = 1,
-        run = 2
+        attack,
+        block,
+        run
     }
 }

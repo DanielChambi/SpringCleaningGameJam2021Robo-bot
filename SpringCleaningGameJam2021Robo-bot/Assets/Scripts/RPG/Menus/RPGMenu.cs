@@ -7,7 +7,7 @@ public class RPGMenu : MonoBehaviour
     public GameObject[] options;
     public GameObject selectedMark;
 
-    RPGMenu prevMenu;
+    public RPGMenu prevMenu;
 
     protected int selectedOption;
 
@@ -41,7 +41,7 @@ public class RPGMenu : MonoBehaviour
 
     public virtual ActionCode SelectOption()
     {
-        return new ActionCode((int)ActionCode.Action.Null);
+        return new ActionCode(ActionCode.Action.Null);
     }
 
     void PlaceMark()
@@ -52,6 +52,12 @@ public class RPGMenu : MonoBehaviour
         float local_x_pos = optionTransform.localPosition.x - optionTransform.rect.width / 2 - markTransform.rect.width / 2;
         markTransform.localPosition = new Vector2(local_x_pos, optionTransform.localPosition.y);
 
+    }
+
+    private void OnDisable()
+    {
+        //Makes sure selected option is always 0 on reload
+        MoveSelection(-selectedOption);
     }
 }
 
