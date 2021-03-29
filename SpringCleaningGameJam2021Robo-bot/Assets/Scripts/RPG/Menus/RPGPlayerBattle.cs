@@ -40,7 +40,7 @@ public class RPGPlayerBattle : RPGUnit
         }
     }
 
-    public string[] AttackListing()
+    public string[] AttackMenuListing()
     {
         string[] list = new string[attackMoveSet.Length];
 

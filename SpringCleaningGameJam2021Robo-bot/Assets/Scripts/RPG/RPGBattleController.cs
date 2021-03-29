@@ -9,31 +9,46 @@ public class RPGBattleController : MonoBehaviour
 
     public RPGMenu currentMenu;
 
-    float inputDelay = 0.1f;
-    float inputTimer;
+    BattleState state;
 
     void Start()
     {
-        inputTimer = inputDelay;
+        state = BattleState.PlayerTurn;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
+        switch (state)
+        {
+            case BattleState.PlayerTurn:
+                UpdatePlayerTurn();
+                break;
+            case BattleState.EnemyTurn:
+                UpdateEnemyTurn();
+                break;
+            case BattleState.BattleWon:
+                UpdateBattleWon();
+                break;
+            case BattleState.BattleLost:
+                UpdateBattleLost();
+                break;
+        }
 
+
+    }
+
+    void UpdatePlayerTurn()
+    {
         if (Input.GetButtonDown("Vertical"))
         {
             float y_axis = Input.GetAxis("Vertical");
             if (y_axis < 0 || y_axis > 0)
             {
-                currentMenu.MoveSelection( -(int)Mathf.Sign(y_axis) );
+                currentMenu.MoveSelection(-(int)Mathf.Sign(y_axis));
             }
         }
-            
-
-       
 
         if (Input.GetButtonDown("Submit"))
         {
@@ -45,6 +60,28 @@ public class RPGBattleController : MonoBehaviour
             ParseActionCode(new ActionCode(ActionCode.Action.MenuGoBack));
         }
     }
+
+    void UpdateEnemyTurn()
+    {
+        bool attackPerformed = false;
+        attackPerformed = enemy.GetComponent<RPGEnemy>().EnemyAttack();
+
+        if (attackPerformed)
+        {
+            EnemyPassTurn();
+        }
+    }
+
+    void UpdateBattleWon()
+    {
+
+    }
+
+    void UpdateBattleLost()
+    {
+
+    }
+
 
     void ParseActionCode(ActionCode action)
     {
@@ -101,18 +138,55 @@ public class RPGBattleController : MonoBehaviour
 
     void PlayerAttack(ActionCode action)
     {
-        Debug.Log("Player using attack: " + action.actionSubindex + " against enemy:" + action.target.name);
+        //Debug.Log("Player using attack: " + action.actionSubindex + " against enemy:" + action.target.name);
 
-        player.GetComponent<RPGUnit>().AttackTarget(action.actionSubindex, enemy.GetComponent<RPGUnit>());
+        bool attackPerformed = false;
+        attackPerformed = player.GetComponent<RPGUnit>().AttackTarget(action.actionSubindex, enemy.GetComponent<RPGUnit>());
+
+        if (attackPerformed)
+        {
+            PlayerPassTurn();
+        }
     }
 
     void PlayerBlock()
     {
-        Debug.Log("Player blocking");
+        //Debug.Log("Player blocking");
+
+        player.GetComponent<RPGPlayerBattle>().PlayerBlock();
     }
 
     void EnemyAttack(ActionCode action)
     {
         Debug.Log("Enemy using attack: " + action.actionSubindex + " against player:" + action.target.name);
+    }
+
+
+    void PlayerPassTurn()
+    {
+        state = BattleState.EnemyTurn;
+
+        //collapse menus back to Default Menu
+        while (!(currentMenu is RPGMenuDefault))
+        {
+            MenuGoBack();
+        }
+
+        enemy.GetComponent<RPGUnit>().UnitSetUp();
+    }
+
+    void EnemyPassTurn()
+    {
+        state = BattleState.PlayerTurn;
+        player.GetComponent<RPGUnit>().UnitSetUp();
+    }
+
+    public enum BattleState
+    {
+        Null,
+        PlayerTurn,
+        EnemyTurn,
+        BattleWon,
+        BattleLost
     }
 }

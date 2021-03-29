@@ -11,7 +11,7 @@ public class RPGMenuPlayerAttack : RPGMenu
     {
         base.Start();
 
-        string[] attackList = controller.player.GetComponent<RPGPlayerBattle>().AttackListing();
+        string[] attackList = controller.player.GetComponent<RPGPlayerBattle>().AttackMenuListing();
 
         for (int i = 0; i < options.Length && i < attackList.Length; i++)
         {

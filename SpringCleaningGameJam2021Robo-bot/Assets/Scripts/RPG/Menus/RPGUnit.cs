@@ -18,23 +18,46 @@ public class RPGUnit : MonoBehaviour
         state = UnitState.Ready;
     }
 
-    public void AttackTarget(int attackIndex, RPGUnit target)
+    /*Set up unit for it's new turn*/
+    public virtual void UnitSetUp()
     {
+        state = UnitState.Ready;
+    }
+
+    public bool AttackTarget(int attackIndex, RPGUnit target)
+    {
+        bool attackPerformed = false;
+
         if (attackIndex >= 0 || attackIndex < attackMoveSet.Length)
         {
             Attack attack = attackMoveSet[attackIndex];
 
             float damage = attack.damage;
 
-            mp -= attack.mpCost;
-            if (mp < 0) mp = 0;
 
-            target.ReceiveDamage(damage);
+            if (mp >= attack.mpCost)
+            {
+                mp -= attack.mpCost;
+                if (mp < 0) mp = 0;
+
+                Debug.Log(gameObject.name + " used: " + attack.name + "!");
+
+                target.ReceiveDamage(damage);
+
+                attackPerformed = true;
+            } else
+            {
+                Debug.Log("Not enough mp!");
+                attackPerformed = false;
+            }        
         }
         else
         {
             Debug.Log("Attack index: " + attackIndex + " out of bounds for unit: " + gameObject.name);
+            attackPerformed = false;
         }
+
+        return attackPerformed;
     }
 
     protected virtual void ReceiveDamage(float damage)
@@ -42,7 +65,7 @@ public class RPGUnit : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
-            state = UnitState.Out;
+            UnitKnockedOut();
         }
     }
 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RPGEnemy : RPGUnit
 {
-    // Start is called before the first frame update
+    public RPGBattleController controller;
+
     protected override void Start()
     {
         base.Start();
@@ -16,6 +17,17 @@ public class RPGEnemy : RPGUnit
         };
 
         hp = 15;
+    }
+
+    public virtual bool EnemyAttack()
+    {
+        bool attackPerformed = false;
+
+        int attackIndex = Random.Range(0, attackMoveSet.Length);
+
+        attackPerformed = AttackTarget(attackIndex, controller.player.GetComponent<RPGUnit>());
+
+        return attackPerformed;
     }
 
     // Update is called once per frame
