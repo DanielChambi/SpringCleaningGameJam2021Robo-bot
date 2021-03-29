@@ -102,6 +102,8 @@ public class RPGBattleController : MonoBehaviour
     void PlayerAttack(ActionCode action)
     {
         Debug.Log("Player using attack: " + action.actionSubindex + " against enemy:" + action.target.name);
+
+        player.GetComponent<RPGUnit>().AttackTarget(action.actionSubindex, enemy.GetComponent<RPGUnit>());
     }
 
     void PlayerBlock()

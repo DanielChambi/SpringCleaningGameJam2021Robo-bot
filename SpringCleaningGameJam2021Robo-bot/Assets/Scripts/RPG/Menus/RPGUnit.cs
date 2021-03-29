@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RPGUnit : MonoBehaviour
 {
-    float hp;
-    int mp;
+    protected float hp;
+    protected int mp;
 
     protected UnitState state;
 
     protected Attack[] attackMoveSet;
 
-    private void Start()
+    protected virtual void Start()
     {
         hp = 10;
         mp = 5;
@@ -37,27 +37,19 @@ public class RPGUnit : MonoBehaviour
         }
     }
 
-    public void ReceiveDamage(float damage)
+    protected virtual void ReceiveDamage(float damage)
     {
-        switch (state)
+        hp -= damage;
+        if(hp <= 0)
         {
-            case UnitState.Ready:
-                hp -= damage;
-                break;
-            case UnitState.Blocking:
-                hp -= damage / 2;
-                break;
-        }
-
-        if (hp <= 0)
-        {
-            UnitKnockedOut();
+            state = UnitState.Out;
         }
     }
 
     protected virtual void UnitKnockedOut()
     {
-
+        state = UnitState.Out;
+        Debug.Log("Unit " + gameObject.name + " knocked out");
     }
 
     protected struct Attack
@@ -76,13 +68,13 @@ public class RPGUnit : MonoBehaviour
         {
             this.mpCost = mpCost;
         }
+
     }
 
     protected enum UnitState
     {
         Null,
         Ready,
-        Blocking,
         Out
     }
 }

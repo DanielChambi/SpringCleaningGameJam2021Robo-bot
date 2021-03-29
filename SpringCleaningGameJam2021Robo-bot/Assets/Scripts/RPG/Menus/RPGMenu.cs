@@ -12,7 +12,7 @@ public class RPGMenu : MonoBehaviour
     protected int selectedOption;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         selectedOption = 0;
         
