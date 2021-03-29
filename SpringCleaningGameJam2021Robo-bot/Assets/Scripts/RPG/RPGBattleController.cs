@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class RPGBattleController : MonoBehaviour
@@ -9,6 +10,10 @@ public class RPGBattleController : MonoBehaviour
     public GameObject player;
 
     public RPGMenu currentMenu;
+
+    public Text playerName;
+    public Text playerHpText;
+    public Text playerMpText;
 
     BattleState state;
 
@@ -39,6 +44,13 @@ public class RPGBattleController : MonoBehaviour
                 UpdateBattleLost();
                 break;
         }
+    }
+
+    private void OnGUI()
+    {
+        playerName.text = player.name;
+        playerHpText.text = player.GetComponent<RPGUnit>().HpString();
+        playerMpText.text = player.GetComponent<RPGUnit>().MpString();
     }
 
     void UpdatePlayerTurn()

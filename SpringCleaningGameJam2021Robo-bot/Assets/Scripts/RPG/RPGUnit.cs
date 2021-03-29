@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RPGUnit : MonoBehaviour
 {
+    protected float hpMax;
+    protected int mpMax;
+
     protected float hp;
     protected int mp;
 
@@ -13,8 +16,11 @@ public class RPGUnit : MonoBehaviour
 
     protected virtual void Start()
     {
-        hp = 10;
-        mp = 5;
+        hpMax = 10;
+        mpMax = 5;
+
+        hp = hpMax;
+        mp = mpMax;
         state = UnitState.Ready;
     }
 
@@ -65,6 +71,7 @@ public class RPGUnit : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
+            hp = 0;
             UnitKnockedOut();
         }
     }
@@ -79,6 +86,16 @@ public class RPGUnit : MonoBehaviour
     public UnitState State()
     {
         return state;
+    }
+
+    public string HpString()
+    {
+        return hp + " / " + hpMax;
+    }
+
+    public string MpString()
+    {
+        return mp + " / " + mpMax;
     }
 
     protected struct Attack
