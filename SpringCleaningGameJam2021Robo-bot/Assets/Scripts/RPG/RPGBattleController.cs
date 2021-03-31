@@ -6,17 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class RPGBattleController : MonoBehaviour
 {
+    /*References to active units in battle
+     * 
+     */
     public GameObject enemy;
     public GameObject player;
 
+    /*Reference to currently active menu
+     * 
+     */
     public RPGMenu currentMenu;
 
+    /*Reference to text UI for player's stats
+     * 
+     */
     public Text playerName;
     public Text playerHpText;
     public Text playerMpText;
 
+    /*Battles state, indicating side's turn and win/lose state 
+     *States dictate behaivour on Update()
+     */
     BattleState state;
 
+    /*indicate if controller is waiting for a coroutine to finish
+     * 
+     */
     bool coroutineEnable;
 
     void Start()
@@ -25,10 +40,8 @@ public class RPGBattleController : MonoBehaviour
         state = BattleState.PlayerTurn;
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         switch (state)
         {
             case BattleState.PlayerTurn:
@@ -48,11 +61,15 @@ public class RPGBattleController : MonoBehaviour
 
     private void OnGUI()
     {
+        //Update UI player stats
         playerName.text = player.name;
-        playerHpText.text = player.GetComponent<RPGUnit>().HpString();
-        playerMpText.text = player.GetComponent<RPGUnit>().MpString();
+        playerHpText.text = player.GetComponent<RPGUnit>().HpToString();
+        playerMpText.text = player.GetComponent<RPGUnit>().MpToString();
     }
 
+    /*Update() behavour on player turn
+     * 
+     */
     void UpdatePlayerTurn()
     {
         if (Input.GetButtonDown("Vertical"))
@@ -60,6 +77,7 @@ public class RPGBattleController : MonoBehaviour
             float y_axis = Input.GetAxis("Vertical");
             if (y_axis < 0 || y_axis > 0)
             {
+                //change selected option on current menu. Assumes option's index increases top to bottom.
                 currentMenu.MoveSelection(-(int)Mathf.Sign(y_axis));
             }
         }
@@ -75,6 +93,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Update() behavour on enemy turn
+    * 
+    */
     void UpdateEnemyTurn()
     {
         bool attackPerformed = false;
@@ -86,6 +107,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Update() behavour after battle is won
+    * 
+    */
     void UpdateBattleWon()
     {
         if (coroutineEnable)
@@ -95,6 +119,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Update() behavour after battle is lost
+    * 
+    */
     void UpdateBattleLost()
     {
         if (coroutineEnable)
@@ -104,7 +131,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
-
+    /*Receive action code from current menu and call appropiate function
+    * action:       action code struct indicating required behavour from menu option
+    */
     void ParseActionCode(ActionCode action)
     {
         switch (action.action){
@@ -134,7 +163,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
-
+    /*Activate Player attack selection menu and update current menu reference
+     *action:       action code, "target" contains GameObject reference to player attack menu
+     */
     void OpenPlayerAttackMenu(ActionCode action)
     {
         //Debug.Log("Opening player attack");
@@ -143,6 +174,9 @@ public class RPGBattleController : MonoBehaviour
         currentMenu = action.target.GetComponent<RPGMenu>();
     }
 
+    /*Close currently active menu and update reference to previous menu
+     *Default menu is lowest possible level and cannot be closed 
+     */
     void MenuGoBack()
     {
         if(!(currentMenu is RPGMenuDefault))
@@ -153,6 +187,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Run away from battle and reload overworld scene
+     *
+     */
     void RunAway()
     {
         Debug.Log("Running away");
@@ -163,6 +200,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Issue directive to player to perfomed attack indicated in action code
+     *action:       action code, "subindex" contains index of player's attack in moveset 
+     */
     void PlayerAttack(ActionCode action)
     {
         //Debug.Log("Player using attack: " + action.actionSubindex + " against enemy:" + action.target.name);
@@ -176,6 +216,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Issue directive to player to activate block state
+     * 
+     */
     void PlayerBlock()
     {
         //Debug.Log("Player blocking");
@@ -185,13 +228,18 @@ public class RPGBattleController : MonoBehaviour
         PlayerPassTurn();
     }
 
+    /*Issue directive to enemy to perfom an attack
+     * 
+     */
     void EnemyAttack(ActionCode action)
     {
         Debug.Log("Enemy using attack: " + action.actionSubindex + " against player:" + action.target.name);
     }
 
 
-
+    /*Close player turn and update vattle state and units for enemy turn
+     * 
+     */
     void PlayerPassTurn()
     {
         //collapse menus back to Default Menu
@@ -211,6 +259,9 @@ public class RPGBattleController : MonoBehaviour
         }
     }
 
+    /*Close enemy turn and update battle state and units for player turn
+     * 
+     */
     void EnemyPassTurn()
     {
         BattleUpdateWinLoseState();
@@ -224,7 +275,9 @@ public class RPGBattleController : MonoBehaviour
 
     }
 
-    /*Checks win/loss condition and update state*/
+    /*Checks win/loss condition and updates battle state
+     *returns:      bool indicating whether the battle has reached an end state or not 
+     */
     bool BattleUpdateWinLoseState()
     {
         bool win = CheckWinCondition();
@@ -241,6 +294,9 @@ public class RPGBattleController : MonoBehaviour
         return win || lose;
     }
 
+    /*Checks for win condition of the battle
+     * returns:     bool indicating whether the win condition has been met
+     */
     bool CheckWinCondition()
     {
         bool win = false;
@@ -253,6 +309,9 @@ public class RPGBattleController : MonoBehaviour
         return win;
     }
 
+    /*Checks for lose condition of the battle
+    * returns:     bool indicating whether the lose condition has been met
+    */
     bool CheckLoseCondition() 
     {
         bool lose = false;
@@ -264,19 +323,27 @@ public class RPGBattleController : MonoBehaviour
         return lose;
     }
 
+    /*Update battle state when the battle is won
+     * 
+     */
     void BattleWon()
     {
         Debug.Log("Battle won! :)");
         state = BattleState.BattleWon;
     }
 
+    /*Update battle state when the battle is lost
+     * 
+     */
     void BattleLost()
     {
         Debug.Log("Battle Lost! :(");
         state = BattleState.BattleLost;
     }
 
-    
+    /*Asynchronous operation to exit battle scene and load last overworld scene
+     * 
+     */
     IEnumerator ExitBattle()
     {
         yield return new WaitForSeconds(5);
@@ -290,7 +357,13 @@ public class RPGBattleController : MonoBehaviour
     }
 
 
-
+    /*Battle's possible states that determines its behavour
+     *Null:         unhandled state
+     *PlayerTurn:   state indicating it's the player's turn to carry actions
+     *EnemyTurn:    state indicating it's the enemy's turn to carry actions
+     *BattleWon:    state indicating the battle has been won
+     *BattleLost:   state indicating the battle has been lost
+     */
     public enum BattleState
     {
         Null,

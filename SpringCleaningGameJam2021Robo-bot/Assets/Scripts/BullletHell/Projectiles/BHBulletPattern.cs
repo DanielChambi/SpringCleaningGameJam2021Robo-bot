@@ -11,12 +11,6 @@ public class BHBulletPattern : MonoBehaviour
         SpawnPattern();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     protected virtual void SpawnPattern()
     {
         //cant make it abstract so here's a flower @-º-|]

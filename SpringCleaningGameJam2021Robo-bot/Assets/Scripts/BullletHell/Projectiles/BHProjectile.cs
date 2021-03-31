@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class BHProjectile : MonoBehaviour
 {
-    /*Base class for all projectiles in Bullet Hell*/
+    
     public float default_y_speed = 7;
     public float damage = 1;    //damage points the projectile does on contact
 
+    //Factor by which play space bounds is multiplied to obtain projectile bounds
     float y_bounds_buffer = 1.5f;
     float x_bounds_buffer = 1.5f;
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {
@@ -33,13 +29,17 @@ public class BHProjectile : MonoBehaviour
 
     }
 
-    /*Default movement pattern for projectile. Function to be rewritten in child projectile clases.*/
+    /*Default movement pattern for projectile. Function to be rewritten in child projectile clases.
+     * 
+     */
     protected virtual void ProjectileMovement()
     {
         transform.Translate(Vector3.up * default_y_speed * Time.deltaTime, Space.World);
     }
 
-    /*Get damage points this projectile deals*/
+    /*Get damage points this projectile deals
+     * 
+     */
     public float Damage()
     {
         return damage;

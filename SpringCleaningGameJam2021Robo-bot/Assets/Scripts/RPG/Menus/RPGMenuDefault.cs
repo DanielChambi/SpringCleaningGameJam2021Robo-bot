@@ -27,6 +27,8 @@ public class RPGMenuDefault : RPGMenu
         }
     }
 
+    /*Named actions that can be selected in this menu
+     */
     enum DefaultOption
     {
         attack,

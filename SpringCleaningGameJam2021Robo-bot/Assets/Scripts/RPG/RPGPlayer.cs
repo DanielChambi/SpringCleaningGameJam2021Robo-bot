@@ -6,14 +6,20 @@ public class RPGPlayer : MonoBehaviour
 {
     public float moveSpeed = 10;
     public float gravity = 20;
-    public float stepSize = 2f;
 
+    //distance travelled that counts as a step
+    public float stepSize = 2f;
+    //counter for distance travelled between steps
     float stepDistance = 0;
 
     CharacterController characterController;
+
     public RPGOverWorldController overWorldController;
 
+    //Initial position on scene load
     Vector3 startPos;
+
+    //direction vector por characte rcontroller movement
     Vector3 moveDirection;
 
     Vector3 prevPosition;
@@ -49,15 +55,18 @@ public class RPGPlayer : MonoBehaviour
 
         Vector3 inputDirection = new Vector3(x_axis, 0, y_axis);
 
+        //get direction vector on local space
         Vector3 flatMovement = transform.TransformDirection(inputDirection) * moveSpeed * Time.deltaTime;
 
+        //add direction vector to previous vertical velocity
         moveDirection = new Vector3(flatMovement.x, moveDirection.y, flatMovement.z);
 
         moveDirection.y -= gravity * Time.deltaTime;
 
+        //apply movment through character controller component
         characterController.Move(moveDirection);
 
-        //Calculate step
+        //Calculate step distance travelled
         Vector2 pos = new Vector2(transform.position.x, transform.position.z);
         Vector2 prevPos = new Vector2(prevPosition.x, prevPosition.z);
 
@@ -67,13 +76,18 @@ public class RPGPlayer : MonoBehaviour
         {
             stepDistance = 0;
 
-            int t =overWorldController.PlayerSteps();
+            //inform controller of a step taken
+            int t = overWorldController.PlayerSteps();
             Debug.Log(t);
         }
 
         prevPosition = transform.position;
     }
 
+
+    /*Set starting position on scene load
+     * 
+     */
     public void SetStartPosition(Vector3 vector)
     {
         startPos = vector;

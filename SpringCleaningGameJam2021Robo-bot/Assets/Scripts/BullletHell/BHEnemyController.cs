@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BHEnemyController: MonoBehaviour
 {
+    //default enemy to spawn
     public GameObject baseEnemy;
+
     int enemiesDestroyed = 0;
 
     int prevEnemiesDestroyed = 0; //for provisional wave spawning
@@ -24,6 +26,9 @@ public class BHEnemyController: MonoBehaviour
         prevEnemiesDestroyed = enemiesDestroyed;
     }
 
+    /*Behaviour when an enemy reports being destroyed
+     *returns:      count of enemies destroyed in this scene
+     */
     public int EnemyDestroyed()
     {
         enemiesDestroyed++;

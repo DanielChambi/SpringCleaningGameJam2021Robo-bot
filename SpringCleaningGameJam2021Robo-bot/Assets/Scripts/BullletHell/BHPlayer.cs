@@ -13,11 +13,14 @@ public class BHPlayer : MonoBehaviour
     public float shootDelay = 10f; //delay between shots in seconds
     float shootTimer;
     
+    //movement vector applied on update
     Vector2 velocity;
 
+    //input directions
     float x_axis;
     float y_axis;
 
+    //reference to current projectile to spawn when attacking
     public GameObject currentProjectile;
 
     void Start()
@@ -26,19 +29,22 @@ public class BHPlayer : MonoBehaviour
         shootTimer = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         ManageMovement();
         ManageShooting();
     }
 
+    /*Handle behaviour for movement
+     * 
+     */
     void ManageMovement()
     {
-        //update velocity
+        //update input axis
         x_axis = Input.GetAxis("Horizontal");
         y_axis = Input.GetAxis("Vertical");
 
+        //updtae velocity based on input
         if (x_axis != 0)
         {
             velocity.x = velocity.x + acceleration * x_axis;
@@ -58,7 +64,7 @@ public class BHPlayer : MonoBehaviour
         }
 
 
-        //apply velocity
+        //update velocity vector liimting to max speed
         velocity.x = Mathf.Clamp(velocity.x, -max_speed, max_speed);
         velocity.y = Mathf.Clamp(velocity.y, -max_speed, max_speed);
 
@@ -72,6 +78,9 @@ public class BHPlayer : MonoBehaviour
         transform.position = newPosition;
     }
 
+    /*Manage behaviour for attacking
+     * 
+     */
     void ManageShooting()
     {
         if (shootTimer > 0)
@@ -92,6 +101,7 @@ public class BHPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //detect collision with enemy projectiles and recive damage it deals
         if(collision.transform.tag == "EnemyProjectile")
         {
             BHProjectile projectile = collision.transform.GetComponent<BHProjectile>();
@@ -100,6 +110,9 @@ public class BHPlayer : MonoBehaviour
         }
     }
 
+    /*Behaviour when player receives damage
+     * 
+     */
     void ReceiveDamage(float damage)
     {
         hp -= damage;
@@ -109,6 +122,9 @@ public class BHPlayer : MonoBehaviour
         }
     }
 
+    /*Behaviour when player is destroyed
+     * 
+     */
     void PlayerDestroy()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().path, LoadSceneMode.Single);

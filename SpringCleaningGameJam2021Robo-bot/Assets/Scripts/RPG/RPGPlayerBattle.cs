@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RPGPlayerBattle : RPGUnit
 {
+    /*Player's blocking state, reseted every turn
+     * 
+     */
     bool blocking = false;
 
     protected override void Start()
@@ -20,11 +23,17 @@ public class RPGPlayerBattle : RPGUnit
         mp = 10;
     }
 
+    /*Set player's blocking state to "blocking" for the turn
+     *
+     */
     public void PlayerBlock()
     {
         blocking = true;
     }
 
+    /*Calculate damage taken based on blocking state
+     * 
+     */
     protected override void ReceiveDamage(float damage)
     {
         if (blocking)
@@ -40,6 +49,9 @@ public class RPGPlayerBattle : RPGUnit
         }
     }
 
+    /*List moveset's attack's names and mp cost for UI
+     * "[AttackName] [MpCost|-]"
+     */
     public string[] AttackMenuListing()
     {
         string[] list = new string[attackMoveSet.Length];
@@ -63,11 +75,5 @@ public class RPGPlayerBattle : RPGUnit
 
         return list;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     
 }

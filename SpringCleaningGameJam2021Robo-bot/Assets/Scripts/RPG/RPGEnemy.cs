@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RPGEnemy : RPGUnit
 {
+    /*Reference to battle controller to obtain list of active players and choose target
+     * 
+     */
     public RPGBattleController controller;
 
     protected override void Start()
@@ -19,6 +22,10 @@ public class RPGEnemy : RPGUnit
         hp = 15;
     }
 
+    /*Logic to select target player and attack used 
+     * 
+     *returns:  bool indicating whether the attack was able to be performed or not
+     */
     public virtual bool EnemyAttack()
     {
         bool attackPerformed = false;
@@ -30,9 +37,4 @@ public class RPGEnemy : RPGUnit
         return attackPerformed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
