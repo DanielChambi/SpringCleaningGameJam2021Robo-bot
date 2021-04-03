@@ -8,16 +8,15 @@ public class BHProjectileEnemyWrench : BHProjectileEnemy
     float x_speed = 3;
     float rotate_speed = 5;
 
-    float path_width = 3;
+    float path_width = 1;
 
     float y_axis;
 
     float time = 0;
 
-
     private void Start()
     {
-        y_axis = transform.position.y;
+        y_axis = transform.position.x;
     }
 
     protected override void ProjectileMovement()
