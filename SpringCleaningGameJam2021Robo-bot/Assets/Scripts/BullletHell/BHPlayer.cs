@@ -8,11 +8,20 @@ public class BHPlayer : MonoBehaviour
     public float max_speed = 5;
     public float acceleration = 1;
 
-    public float hp = 20;
+    public float hpMax = 20; 
+    public float hp;
 
     public float shootDelay = 10f; //delay between shots in seconds
     float shootTimer;
-    
+
+    //Time player is invincible after hit
+    float invinDuration = 0.3f;
+    //Time player is uncapable of shooting after hit
+    float staggerduration = 0.3f;
+
+    bool invincible = false;
+    bool canShoot = true;
+
     //movement vector applied on update
     Vector2 velocity;
 
@@ -25,6 +34,7 @@ public class BHPlayer : MonoBehaviour
 
     void Start()
     {
+        hp = hpMax;
         velocity = Vector2.zero;
         shootTimer = 0;
     }
@@ -89,7 +99,7 @@ public class BHPlayer : MonoBehaviour
             if (shootTimer < 0) shootTimer = 0;
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && canShoot)
         {
             if(shootTimer == 0)
             {
@@ -102,7 +112,7 @@ public class BHPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //detect collision with enemy projectiles and recive damage it deals
-        if(collision.transform.tag == "EnemyProjectile")
+        if(collision.transform.tag == "EnemyProjectile" && !invincible)
         {
             BHProjectile projectile = collision.transform.GetComponent<BHProjectile>();
             ReceiveDamage(projectile.Damage());
@@ -120,6 +130,40 @@ public class BHPlayer : MonoBehaviour
         {
             PlayerDestroy();
         }
+
+        invincible = true;
+        StartCoroutine(HitInvinBlinking());
+        canShoot = false;
+        StartCoroutine(Stagger());
+    }
+
+    /*Coroutine to cause player blinking animation after hit
+     * 
+     */
+    IEnumerator HitInvinBlinking()
+    {
+        float timer = 0;
+        WaitForSeconds blinkDuration = new WaitForSeconds(0.1f);
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+
+        while (timer <= invinDuration )
+        {
+            timer += Time.deltaTime;
+            yield return blinkDuration;
+            sprite.enabled = !sprite.enabled;
+        }
+        sprite.enabled = true;
+        
+        invincible = false;
+    }
+
+    /*Coroutine to control stagger after hit
+     * 
+     */
+    IEnumerator Stagger()
+    {
+        yield return new WaitForSeconds(staggerduration);
+        canShoot = true;
     }
 
     /*Behaviour when player is destroyed
@@ -128,6 +172,11 @@ public class BHPlayer : MonoBehaviour
     void PlayerDestroy()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().path, LoadSceneMode.Single);
+    }
+
+    public string HpToString()
+    {
+        return hp + " / " + hpMax;
     }
 
 }
