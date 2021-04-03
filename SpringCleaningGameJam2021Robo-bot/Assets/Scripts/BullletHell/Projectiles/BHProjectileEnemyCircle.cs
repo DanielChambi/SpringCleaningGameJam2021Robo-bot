@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BHProjectileEnemyCircle : BHProjectileEnemy
 {
-    float speed = 1;
+    float speed = 5;
 
     /*Movement for all projectiles spawned by Circle bullet pattern*/
     protected override void ProjectileMovement()
