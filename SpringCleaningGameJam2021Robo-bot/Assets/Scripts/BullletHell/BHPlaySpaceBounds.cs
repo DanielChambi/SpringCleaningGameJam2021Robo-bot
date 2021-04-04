@@ -29,4 +29,22 @@ public class BHPlaySpaceBounds : MonoBehaviour
     {
         return playSpaceBounds;
     }
+
+    private void OnDrawGizmos()
+    {
+        Vector2 p1 = new Vector2(playSpaceBounds.min.x, playSpaceBounds.min.y);
+        Vector2 p2 = new Vector2(playSpaceBounds.max.x, playSpaceBounds.min.y);
+        Vector2 p3 = new Vector2(playSpaceBounds.max.x, playSpaceBounds.max.y);
+        Vector2 p4 = new Vector2(playSpaceBounds.min.x, playSpaceBounds.max.y);
+
+
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawLine(p1, p2);
+        Gizmos.DrawLine(p2, p3);
+        Gizmos.DrawLine(p3, p4);
+        Gizmos.DrawLine(p4, p1);
+
+        Gizmos.color = Color.white;
+    }
 }

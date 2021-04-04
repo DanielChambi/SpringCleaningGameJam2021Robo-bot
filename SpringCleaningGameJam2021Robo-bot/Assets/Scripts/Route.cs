@@ -5,7 +5,7 @@ using UnityEngine;
 public class Route : MonoBehaviour
 {
     [SerializeField]
-    Transform[] controlPoints;
+    protected Transform[] controlPoints;
 
     private void OnDrawGizmos()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BHEnemy : MonoBehaviour
 {
-    float hp = 10;
+    protected float hp = 10;
 
     //default movement speed
     protected float default_speed = 5;
@@ -17,7 +17,7 @@ public class BHEnemy : MonoBehaviour
 
     void Start()
     {
-        enemyController = GameObject.Find("BHEnemyController").GetComponent<BHEnemyController>();
+        enemyController = GameObject.Find("BHGameController").GetComponent<BHEnemyController>();
         SetUp();
     }
 
