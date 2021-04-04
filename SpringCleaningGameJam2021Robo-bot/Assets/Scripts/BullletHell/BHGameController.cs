@@ -7,7 +7,20 @@ public class BHGameController : MonoBehaviour
 {
     public GameObject player;
     public Text playerHp;
-    bool winCondition { get; }
+
+    //text for provisional end screen
+    public Text youWonText;
+    
+
+    bool winCondition = false;
+    
+    public void WinConditionMet()
+    {
+        winCondition = true;
+        //provisional indicator
+        youWonText.gameObject.SetActive(true);
+
+    }
 
     private void OnGUI()
     {

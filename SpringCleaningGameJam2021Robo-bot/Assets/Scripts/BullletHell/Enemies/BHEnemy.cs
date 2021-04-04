@@ -17,7 +17,7 @@ public class BHEnemy : MonoBehaviour
 
     void Start()
     {
-        enemyController = GameObject.Find("BHEnemyController").GetComponent<BHEnemyController>();
+        enemyController = GameObject.Find("BHGameController").GetComponent<BHEnemyController>();
         SetUp();
     }
 

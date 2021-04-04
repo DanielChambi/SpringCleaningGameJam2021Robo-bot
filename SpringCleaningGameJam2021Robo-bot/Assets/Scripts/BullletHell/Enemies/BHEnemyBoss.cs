@@ -6,6 +6,7 @@ public class BHEnemyBoss : BHEnemy
 {
     [SerializeField]
     private Transform[] routes;
+
     [SerializeField]
     GameObject projectileGarbage;
     [SerializeField]
@@ -14,6 +15,10 @@ public class BHEnemyBoss : BHEnemy
     GameObject projectileWrench;
     [SerializeField]
     GameObject patternGarbageLine;
+
+    //reference to game controller to report win condition met on destroy
+    [SerializeField]
+    GameObject gameController;
 
     private int routeToGo;
 
@@ -51,7 +56,7 @@ public class BHEnemyBoss : BHEnemy
     // Start is called before the first frame update
     protected override void SetUp()
     {
-        hp = 500;
+        hp = 10;
 
         routeToGo = 0;
         tParam = 0f;
@@ -282,6 +287,8 @@ public class BHEnemyBoss : BHEnemy
         followRoute = true;
         yield break;
     }
+
+
     private IEnumerator GoByTheRoute(int routeNum)
     {
         routeCoroutineAllowed = false;
@@ -315,6 +322,12 @@ public class BHEnemyBoss : BHEnemy
 
         routeCoroutineAllowed = true;
 
+    }
+
+    protected override void EnemyDestroy()
+    {
+        gameController.GetComponent<BHGameController>().WinConditionMet();
+        base.EnemyDestroy();
     }
 
     enum BossPhase

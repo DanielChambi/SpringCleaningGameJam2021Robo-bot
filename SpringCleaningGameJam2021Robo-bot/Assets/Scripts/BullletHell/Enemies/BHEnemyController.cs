@@ -9,7 +9,7 @@ public class BHEnemyController: MonoBehaviour
 
     int enemiesDestroyed = 0;
 
-    int prevEnemiesDestroyed = 0; //for provisional wave spawning
+    //int prevEnemiesDestroyed = 0; //for provisional wave spawning
 
     private void Update()
     {
@@ -37,6 +37,10 @@ public class BHEnemyController: MonoBehaviour
         return enemiesDestroyed;
     }
 
+    public int EnemiesDestroyedCount()
+    {
+        return enemiesDestroyed;
+    }
     
 }
 
