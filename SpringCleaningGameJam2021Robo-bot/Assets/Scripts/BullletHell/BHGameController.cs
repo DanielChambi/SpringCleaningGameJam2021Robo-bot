@@ -30,6 +30,7 @@ public class BHGameController : MonoBehaviour
         //provisional indicator
         backgroundSource.GetComponent<BHBackgroundMusic>().PlayVictoryMusic();
         youWonText.gameObject.SetActive(true);
+        Invoke("LoadCredits", 3);
 
     }
 
@@ -37,6 +38,11 @@ public class BHGameController : MonoBehaviour
     {
         backgroundSource.Stop();
         StartCoroutine(BlackOutFadeOut());
+    }
+
+    void LoadCredits()
+    {
+        StartCoroutine(BlackOutFadeOut("Scenes/CreditsScene"));
     }
 
     private void OnGUI()
@@ -67,5 +73,19 @@ public class BHGameController : MonoBehaviour
         }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator BlackOutFadeOut(string scenePath)
+    {
+        float imageAlpha = blackOutSquare.color.a;
+        Color color = blackOutSquare.color;
+        while (imageAlpha < 1)
+        {
+            imageAlpha += Time.deltaTime * blackOutFadeSpeed;
+            blackOutSquare.color = new Color(color.r, color.g, color.b, imageAlpha);
+            yield return null;
+        }
+
+        SceneManager.LoadScene(scenePath);
     }
 }

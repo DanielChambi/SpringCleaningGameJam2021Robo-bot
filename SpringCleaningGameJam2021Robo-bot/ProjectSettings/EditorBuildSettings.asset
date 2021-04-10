@@ -11,16 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BulletHell/BulletHellScene.unity
     guid: 899fb68f38a2edd4397f8a40a40a5c36
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Platformer/PlatformerScene1.unity
     guid: 8ad687219631d264d995feb04b02d07b
   - enabled: 0
     path: Assets/Scenes/RPG/RPGScene1.unity
     guid: 4781708849bacba44844d51906b47a0e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RPG/RPGOverworld.unity
     guid: 22ddd40189c675c4c84f13abb836aa37
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RPG/RPGBattle.unity
     guid: 4b174f31a104d974c97b4e65bab60c23
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: ca8bb481b0a9aa74daee89a6ef88d73b
   m_configObjects: {}
