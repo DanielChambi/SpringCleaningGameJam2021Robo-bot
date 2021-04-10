@@ -79,7 +79,7 @@ public class BHEnemyBoss : BHEnemy
         shootAttacking = false;
 
         projectileSpawnerWidth = 8;
-        projectileSpawnerY = 0;
+        projectileSpawnerY = -4;
         projectileSpawnerTopLeftPos = new Vector2(-projectileSpawnerWidth / 2, projectileSpawnerY);
     }
 
