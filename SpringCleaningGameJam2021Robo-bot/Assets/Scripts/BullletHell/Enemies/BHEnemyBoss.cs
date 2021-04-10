@@ -20,6 +20,8 @@ public class BHEnemyBoss : BHEnemy
     [SerializeField]
     GameObject gameController;
 
+    Animator animator;
+
     private int routeToGo;
 
     private float tParam;
@@ -56,6 +58,8 @@ public class BHEnemyBoss : BHEnemy
     // Start is called before the first frame update
     protected override void SetUp()
     {
+        animator = GetComponent<Animator>();
+
         hp = 10;
 
         routeToGo = 0;
@@ -79,7 +83,7 @@ public class BHEnemyBoss : BHEnemy
         shootAttacking = false;
 
         projectileSpawnerWidth = 8;
-        projectileSpawnerY = -4;
+        projectileSpawnerY = -4.5f;
         projectileSpawnerTopLeftPos = new Vector2(-projectileSpawnerWidth / 2, projectileSpawnerY);
     }
 
@@ -127,6 +131,7 @@ public class BHEnemyBoss : BHEnemy
             if (shootAttackStepCount >= shootAttackDelay)
             {
                 shootAttacking = true;
+                animator.SetBool("ShootAttacking", true);
                 followRoute = false;
                 shootAttackDelay = shootAttackDelayDefault + Random.Range(-shootAttackDelayOffset, shootAttackDelayOffset);
                 shootAttackStepCount = 0;
@@ -194,12 +199,14 @@ public class BHEnemyBoss : BHEnemy
 
         for (int i = 0; i < iterations; i++)
         {
-            Instantiate(patternGarbageLine, transform.position, Quaternion.identity);
+
+            Instantiate(patternGarbageLine, new Vector3(transform.position.x, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
             yield return delay;
         }
 
         waveCoroutineAllowed = true;
         shootAttacking = false;
+        animator.SetBool("ShootAttacking", false);
         followRoute = true;
     }
 
@@ -230,7 +237,7 @@ public class BHEnemyBoss : BHEnemy
                     x_pos = x_origin + spacing * (numProjectiles - j);
                 }
 
-                Instantiate(projectileBag, new Vector3(x_pos, transform.position.y, 0), Quaternion.identity);
+                Instantiate(projectileBag, new Vector3(x_pos, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
 
                 yield return delay;
             }
@@ -242,6 +249,7 @@ public class BHEnemyBoss : BHEnemy
 
         waveCoroutineAllowed = true;
         shootAttacking = false;
+        animator.SetBool("ShootAttacking", false);
         followRoute = true;
     }
 
@@ -271,7 +279,7 @@ public class BHEnemyBoss : BHEnemy
 
                     if (isEven == spawnEvenPillars)
                     {
-                        Instantiate(projectileWrench, new Vector3(x_origin + spacing * n, transform.position.y, 0), Quaternion.identity);
+                        Instantiate(projectileWrench, new Vector3(x_origin + spacing * n, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
                     }
                 }
 
@@ -284,8 +292,8 @@ public class BHEnemyBoss : BHEnemy
 
         waveCoroutineAllowed = true;
         shootAttacking = false;
+        animator.SetBool("ShootAttacking", false);
         followRoute = true;
-        yield break;
     }
 
 

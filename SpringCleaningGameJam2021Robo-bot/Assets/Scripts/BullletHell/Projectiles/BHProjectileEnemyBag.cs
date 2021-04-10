@@ -5,8 +5,8 @@ using UnityEngine;
 public class BHProjectileEnemyBag : BHProjectileEnemy
 {
     float explodeTime;
-    float explodeTimeMin = 1.75f;
-    float explodeTimeMax = 2f;
+    float explodeTimeMin = 1f;
+    float explodeTimeMax = 1.75f;
     float explodeTimer = 0;
 
     float speed = 5;

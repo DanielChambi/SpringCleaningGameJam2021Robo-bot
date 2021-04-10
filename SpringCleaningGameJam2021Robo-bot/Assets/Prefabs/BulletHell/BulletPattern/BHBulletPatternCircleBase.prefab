@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 8714129952044106600, guid: 27838a260ef6dee42bbdd32bcef8edb6, type: 3}
-  num_bullet: 20
+  num_bullet: 10
