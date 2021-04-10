@@ -32,6 +32,8 @@ public class BHPlayer : MonoBehaviour
     //reference to current projectile to spawn when attacking
     public GameObject currentProjectile;
 
+    public BHSoundManager soundManager;
+
     void Start()
     {
         hp = hpMax;
@@ -104,6 +106,7 @@ public class BHPlayer : MonoBehaviour
             if(shootTimer == 0)
             {
                 GameObject.Instantiate(currentProjectile, transform.position, Quaternion.identity);
+                soundManager.PlayClip(BHSoundManager.SoundClip.PlayerShoot);
                 shootTimer = shootDelay;
             }
         }
@@ -126,6 +129,7 @@ public class BHPlayer : MonoBehaviour
     void ReceiveDamage(float damage)
     {
         hp -= damage;
+        soundManager.PlayClip(BHSoundManager.SoundClip.PlayerHit);
         if(hp <= 0)
         {
             PlayerDestroy();

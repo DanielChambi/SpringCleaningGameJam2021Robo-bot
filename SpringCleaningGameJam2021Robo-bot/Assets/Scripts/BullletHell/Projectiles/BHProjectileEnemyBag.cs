@@ -13,9 +13,13 @@ public class BHProjectileEnemyBag : BHProjectileEnemy
 
     public GameObject circlePattern;
 
+    BHSoundManager soundManager;
+
     private void Start()
     {
         explodeTime = Random.Range(explodeTimeMin, explodeTimeMax);
+
+        soundManager = GameObject.Find("SoundManager").GetComponent<BHSoundManager>();
     }
     protected override void ProjectileMovement()
     {
@@ -23,6 +27,7 @@ public class BHProjectileEnemyBag : BHProjectileEnemy
         if(explodeTimer >= explodeTime)
         {
             Instantiate(circlePattern, transform.position, Quaternion.identity);
+            soundManager.PlayClip(BHSoundManager.SoundClip.ProjectileBagExplode);
             Destroy(gameObject);
         }
 

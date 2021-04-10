@@ -20,6 +20,10 @@ public class BHEnemyBoss : BHEnemy
     [SerializeField]
     GameObject gameController;
 
+    [SerializeField]
+    BHSoundManager soundManager;
+
+
     Animator animator;
 
     private int routeToGo;
@@ -58,9 +62,9 @@ public class BHEnemyBoss : BHEnemy
     // Start is called before the first frame update
     protected override void SetUp()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();      
 
-        hp = 10;
+        hp = 2000;
 
         routeToGo = 0;
         tParam = 0f;
@@ -133,6 +137,8 @@ public class BHEnemyBoss : BHEnemy
                 shootAttacking = true;
                 animator.SetBool("ShootAttacking", true);
                 followRoute = false;
+                soundManager.PlayClip(BHSoundManager.SoundClip.BossAttackStart);
+
                 shootAttackDelay = shootAttackDelayDefault + Random.Range(-shootAttackDelayOffset, shootAttackDelayOffset);
                 shootAttackStepCount = 0;
             }
@@ -166,6 +172,7 @@ public class BHEnemyBoss : BHEnemy
         float x_offset = Random.Range(0, projectileSpawnerWidth);
         Vector3 spawnPosLocal = new Vector3(projectileSpawnerTopLeftPos.x + x_offset, projectileSpawnerTopLeftPos.y, 0);
         Instantiate(projectile, transform.position + spawnPosLocal, Quaternion.identity);
+        soundManager.PlayClip(BHSoundManager.SoundClip.BossShoot);
     }
 
     void StartRandomWave()
@@ -201,6 +208,7 @@ public class BHEnemyBoss : BHEnemy
         {
 
             Instantiate(patternGarbageLine, new Vector3(transform.position.x, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
+            soundManager.PlayClip(BHSoundManager.SoundClip.BossShoot);
             yield return delay;
         }
 
@@ -238,6 +246,7 @@ public class BHEnemyBoss : BHEnemy
                 }
 
                 Instantiate(projectileBag, new Vector3(x_pos, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
+                soundManager.PlayClip(BHSoundManager.SoundClip.BossShoot);
 
                 yield return delay;
             }
@@ -265,7 +274,7 @@ public class BHEnemyBoss : BHEnemy
 
         bool spawnEvenPillars = true;
 
-        float spacing = 2;
+        float spacing = 2.2f;
 
         float x_origin = transform.position.x - (spacing * (numPillars - 1)) / 2;
 
@@ -280,6 +289,7 @@ public class BHEnemyBoss : BHEnemy
                     if (isEven == spawnEvenPillars)
                     {
                         Instantiate(projectileWrench, new Vector3(x_origin + spacing * n, transform.position.y + projectileSpawnerTopLeftPos.y, 0), Quaternion.identity);
+                        soundManager.PlayClip(BHSoundManager.SoundClip.BossShoot);
                     }
                 }
 
@@ -335,6 +345,7 @@ public class BHEnemyBoss : BHEnemy
     protected override void EnemyDestroy()
     {
         gameController.GetComponent<BHGameController>().WinConditionMet();
+        soundManager.PlayClip(BHSoundManager.SoundClip.BossDefeat);
         base.EnemyDestroy();
     }
 
