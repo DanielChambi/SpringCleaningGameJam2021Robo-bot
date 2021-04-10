@@ -23,6 +23,8 @@ public class BHEnemyBoss : BHEnemy
     [SerializeField]
     BHSoundManager soundManager;
 
+    [SerializeField]
+    AudioSource backgroundSource;
 
     Animator animator;
 
@@ -41,6 +43,9 @@ public class BHEnemyBoss : BHEnemy
 
     BossPhase phase;
 
+    //hp percentage at which the mid point of the fight starts
+    float midPointPercentage;
+
     //Control time between attacking in shoot phase
     int shootAttackDelay;
     int shootAttackDelayDefault;      //default delay between attacks
@@ -53,6 +58,7 @@ public class BHEnemyBoss : BHEnemy
     //steps are variable units of time
     float stepTime;
     float stepTimer;
+    float stepModifier;
 
     //parameter to define position where to spawn projectiles
     float projectileSpawnerWidth;           //width of spawning area
@@ -64,7 +70,10 @@ public class BHEnemyBoss : BHEnemy
     {
         animator = GetComponent<Animator>();      
 
-        hp = 2000;
+        hpMax = 100;
+        hp = hpMax;
+
+        midPointPercentage = 0.4f;
 
         routeToGo = 0;
         tParam = 0f;
@@ -83,6 +92,7 @@ public class BHEnemyBoss : BHEnemy
 
         stepTime = 1f;
         stepTimer = 0;
+        stepModifier = 1;
 
         shootAttacking = false;
 
@@ -109,7 +119,7 @@ public class BHEnemyBoss : BHEnemy
 
     void UpdateShootPhase()
     {
-        stepTimer += Time.deltaTime;
+        stepTimer += Time.deltaTime * stepModifier;
         if (stepTimer >= stepTime)
         {
             ShootStep();
@@ -342,13 +352,42 @@ public class BHEnemyBoss : BHEnemy
 
     }
 
+    protected override void ReceiveDamage(float damage)
+    {
+        base.ReceiveDamage(damage);
+        if(hp <= hpMax * midPointPercentage)
+        {
+            stepModifier = 1.25f;
+            speedModifier = 2.5f;
+            backgroundSource.pitch = 1.08f;
+        }
+    }
+
     protected override void EnemyDestroy()
     {
         gameController.GetComponent<BHGameController>().WinConditionMet();
         soundManager.PlayClip(BHSoundManager.SoundClip.BossDefeat);
-        base.EnemyDestroy();
+        backgroundSource.Stop();
+        StopAllCoroutines();
+        stepModifier = 0;
+        StartCoroutine(FadeOut());
     }
 
+    IEnumerator FadeOut()
+    {
+        float fadeTime = 0.5f;
+        float timer = fadeTime;
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, (float)(timer / fadeTime));
+            yield return new WaitForEndOfFrame();
+        }
+
+        base.EnemyDestroy();
+    }
     enum BossPhase
     {
         Null,

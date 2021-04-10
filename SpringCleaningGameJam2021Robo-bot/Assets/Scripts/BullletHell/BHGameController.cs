@@ -8,6 +8,7 @@ public class BHGameController : MonoBehaviour
     public GameObject player;
     public Text playerHp;
 
+    public AudioSource backgroundSource;
     //text for provisional end screen
     public Text youWonText;
     
@@ -18,6 +19,7 @@ public class BHGameController : MonoBehaviour
     {
         winCondition = true;
         //provisional indicator
+        backgroundSource.GetComponent<BHBackgroundMusic>().PlayVictoryMusic();
         youWonText.gameObject.SetActive(true);
 
     }
