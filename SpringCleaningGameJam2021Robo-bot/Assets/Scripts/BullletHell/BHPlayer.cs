@@ -34,6 +34,8 @@ public class BHPlayer : MonoBehaviour
 
     public BHSoundManager soundManager;
 
+    public BHGameController controller;
+
     void Start()
     {
         hp = hpMax;
@@ -175,7 +177,8 @@ public class BHPlayer : MonoBehaviour
      */
     void PlayerDestroy()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().path, LoadSceneMode.Single);
+        controller.ReloadScene();
+        Destroy(gameObject);
     }
 
     public string HpToString()
