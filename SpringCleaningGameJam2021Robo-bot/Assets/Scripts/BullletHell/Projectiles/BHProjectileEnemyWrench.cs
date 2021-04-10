@@ -6,9 +6,9 @@ public class BHProjectileEnemyWrench : BHProjectileEnemy
 {
     float y_speed = 5;
     float x_speed = 3;
-    float rotate_speed = 5;
+    float rotate_speed = 2;
 
-    float path_width = 1;
+    float path_width = 1.5f;
 
     float y_axis;
 
