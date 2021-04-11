@@ -6,7 +6,7 @@ public class BHProjectileEnemyWrench : BHProjectileEnemy
 {
     float y_speed = 5;
     float x_speed = 3;
-    float rotate_speed = 2;
+    float rotate_speed = 100;
 
     float path_width = 1.5f;
 
@@ -30,6 +30,6 @@ public class BHProjectileEnemyWrench : BHProjectileEnemy
 
         transform.Translate(Vector2.down * y_speed * Time.deltaTime, Space.World);
 
-        transform.Rotate(Vector3.forward, rotate_speed);
+        transform.Rotate(Vector3.forward, rotate_speed * Time.deltaTime);
     }
 }

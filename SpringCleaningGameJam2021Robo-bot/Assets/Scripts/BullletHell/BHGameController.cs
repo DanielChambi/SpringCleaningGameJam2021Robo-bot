@@ -44,7 +44,7 @@ public class BHGameController : MonoBehaviour
     {
         StartCoroutine(BlackOutFadeOut("Scenes/CreditsScene"));
     }
-
+    
     private void OnGUI()
     {
         playerHp.text = player.GetComponent<BHPlayer>().HpToString();
