@@ -365,7 +365,6 @@ public class BHEnemyBoss : BHEnemy
 
     protected override void EnemyDestroy()
     {
-        gameController.GetComponent<BHGameController>().WinConditionMet();
         soundManager.PlayClip(BHSoundManager.SoundClip.BossDefeat);
         backgroundSource.Stop();
         StopAllCoroutines();
@@ -386,6 +385,7 @@ public class BHEnemyBoss : BHEnemy
             yield return new WaitForEndOfFrame();
         }
 
+        gameController.GetComponent<BHGameController>().WinConditionMet();        
         base.EnemyDestroy();
     }
     enum BossPhase
