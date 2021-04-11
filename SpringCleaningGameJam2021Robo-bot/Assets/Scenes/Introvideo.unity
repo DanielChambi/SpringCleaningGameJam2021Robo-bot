@@ -396,7 +396,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945633657}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 2a16b730dd6f35e42aae1941f31353b0, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 324a1d41e0a1a884f9ab77710970c558, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackOutSquare: {fileID: 806402719}
   player: {fileID: 945633658}
-  loadScenePath: Scenes/MainMenu
+  loadScenePath: Scenes/BulletHell/BulletHellScene
 --- !u!4 &1441068701
 Transform:
   m_ObjectHideFlags: 0

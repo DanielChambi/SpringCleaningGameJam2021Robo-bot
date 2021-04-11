@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     public Button startButton;
 
-    string firstGameScene = "Scenes/BulletHell/BulletHellScene";
+    string firstGameScene = "Scenes/Introvideo";
 
     void Start()
     {
