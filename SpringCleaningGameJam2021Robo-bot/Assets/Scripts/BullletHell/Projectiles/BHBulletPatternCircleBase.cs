@@ -5,7 +5,7 @@ using UnityEngine;
 public class BHBulletPatternCircleBase : BHBulletPattern
 {
     public GameObject projectile;
-    public int num_bullet = 20;
+    public int num_bullet = 8;
     
     protected override void SpawnPattern()
     {

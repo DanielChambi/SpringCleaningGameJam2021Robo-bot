@@ -9,11 +9,12 @@ public class BHEnemyController: MonoBehaviour
 
     int enemiesDestroyed = 0;
 
-    int prevEnemiesDestroyed = 0; //for provisional wave spawning
+    //int prevEnemiesDestroyed = 0; //for provisional wave spawning
 
     private void Update()
     {
-        /*Provisional wave spawning*/
+        /*
+        //Provisional wave spawning
         if(enemiesDestroyed > prevEnemiesDestroyed)
         {
             GameObject enemy = Instantiate(baseEnemy, this.transform);
@@ -24,6 +25,7 @@ public class BHEnemyController: MonoBehaviour
             }
         }
         prevEnemiesDestroyed = enemiesDestroyed;
+        */
     }
 
     /*Behaviour when an enemy reports being destroyed
@@ -35,6 +37,10 @@ public class BHEnemyController: MonoBehaviour
         return enemiesDestroyed;
     }
 
+    public int EnemiesDestroyedCount()
+    {
+        return enemiesDestroyed;
+    }
     
 }
 

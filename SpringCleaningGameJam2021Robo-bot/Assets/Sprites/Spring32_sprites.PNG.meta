@@ -1,0 +1,1716 @@
+fileFormatVersion: 2
+guid: bd019fc4f2069484e99a0560c9cc4be9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7600226566191572307
+    second: Spring32_sprites_0
+  - first:
+      213: 7819951214815454861
+    second: Spring32_sprites_1
+  - first:
+      213: -6147926977060002940
+    second: Spring32_sprites_2
+  - first:
+      213: -3459623366722150880
+    second: Spring32_sprites_3
+  - first:
+      213: 989748126978684193
+    second: Spring32_sprites_4
+  - first:
+      213: 817618651162937222
+    second: Spring32_sprites_5
+  - first:
+      213: -3778597730212386605
+    second: Spring32_sprites_6
+  - first:
+      213: -6922382603794579867
+    second: Spring32_sprites_7
+  - first:
+      213: -8835730663788292711
+    second: Spring32_sprites_8
+  - first:
+      213: 8024764287449146664
+    second: Spring32_sprites_9
+  - first:
+      213: 8519347123105264198
+    second: Spring32_sprites_10
+  - first:
+      213: 1411234047862073816
+    second: Spring32_sprites_11
+  - first:
+      213: 3704265866928826529
+    second: Spring32_sprites_12
+  - first:
+      213: -680383707851724113
+    second: Spring32_sprites_13
+  - first:
+      213: -2409463284567323805
+    second: Spring32_sprites_14
+  - first:
+      213: 7927315274463864571
+    second: Spring32_sprites_15
+  - first:
+      213: 8583341056672925393
+    second: Spring32_sprites_16
+  - first:
+      213: 4141554588552320416
+    second: Spring32_sprites_17
+  - first:
+      213: -8856752134185012140
+    second: Spring32_sprites_18
+  - first:
+      213: -918072515598597417
+    second: Spring32_sprites_19
+  - first:
+      213: 5827759466327747970
+    second: Spring32_sprites_20
+  - first:
+      213: 8648809488018256009
+    second: Spring32_sprites_21
+  - first:
+      213: -357722919527720333
+    second: Spring32_sprites_22
+  - first:
+      213: -1641348782147839702
+    second: Spring32_sprites_23
+  - first:
+      213: 4385382838354850759
+    second: Spring32_sprites_24
+  - first:
+      213: 2412102480492063064
+    second: Spring32_sprites_25
+  - first:
+      213: -6328195035336326315
+    second: Spring32_sprites_26
+  - first:
+      213: -2177893564248449946
+    second: Spring32_sprites_27
+  - first:
+      213: 3457370317663445454
+    second: Spring32_sprites_28
+  - first:
+      213: 876029803549410455
+    second: Spring32_sprites_29
+  - first:
+      213: 411816890294392245
+    second: Spring32_sprites_30
+  - first:
+      213: -5560021757335488015
+    second: Spring32_sprites_31
+  - first:
+      213: -1182306856220185973
+    second: Spring32_sprites_32
+  - first:
+      213: -7993365038210255306
+    second: Spring32_sprites_33
+  - first:
+      213: -977813255295910213
+    second: Spring32_sprites_34
+  - first:
+      213: 1470158779953790030
+    second: Spring32_sprites_35
+  - first:
+      213: -2080602123605193099
+    second: Spring32_sprites_36
+  - first:
+      213: 9210600723469954564
+    second: Spring32_sprites_37
+  - first:
+      213: -1531932311449028848
+    second: Spring32_sprites_38
+  - first:
+      213: 7296158765566914215
+    second: Spring32_sprites_39
+  - first:
+      213: 4237537637330518746
+    second: Spring32_sprites_40
+  - first:
+      213: 7501270384968893698
+    second: Spring32_sprites_41
+  - first:
+      213: 1107403626446818805
+    second: Spring32_sprites_42
+  - first:
+      213: 6397737690014527686
+    second: Spring32_sprites_43
+  - first:
+      213: -3652269486592658542
+    second: Spring32_sprites_44
+  - first:
+      213: -3708997357474274660
+    second: Spring32_sprites_45
+  - first:
+      213: -828610436807092016
+    second: Spring32_sprites_46
+  - first:
+      213: 8600721238152342546
+    second: Spring32_sprites_47
+  - first:
+      213: -5432331750678828332
+    second: Spring32_sprites_48
+  - first:
+      213: -114455790938010420
+    second: Spring32_sprites_49
+  - first:
+      213: -1337581488731786291
+    second: Spring32_sprites_50
+  - first:
+      213: 4282906159667770028
+    second: Spring32_sprites_51
+  - first:
+      213: -5062632135242092079
+    second: Spring32_sprites_52
+  - first:
+      213: 7496013615933627230
+    second: Spring32_sprites_53
+  - first:
+      213: -6285863622748122076
+    second: Spring32_sprites_54
+  - first:
+      213: 7054904905837159496
+    second: Spring32_sprites_55
+  - first:
+      213: -1675443746152438098
+    second: Spring32_sprites_56
+  - first:
+      213: 8966337280762778673
+    second: Spring32_sprites_57
+  - first:
+      213: 6918111386358430564
+    second: Spring32_sprites_58
+  - first:
+      213: -2807032470358174987
+    second: Spring32_sprites_59
+  - first:
+      213: 7801485645195156844
+    second: Spring32_sprites_60
+  - first:
+      213: -7575401140005172609
+    second: Spring32_sprites_61
+  - first:
+      213: 7214899639587137617
+    second: Spring32_sprites_62
+  - first:
+      213: -3401700000017090745
+    second: Spring32_sprites_63
+  - first:
+      213: -3590310459143531952
+    second: Spring32_sprites_64
+  - first:
+      213: 8951576766567812385
+    second: Spring32_sprites_65
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spring32_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 779
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa1aada432968690800000000000000
+      internalID: -7600226566191572307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 779
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86a5ffa23c068c60800000000000000
+      internalID: 7819951214815454861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 779
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4832c4bccfc2eaaa0800000000000000
+      internalID: -6147926977060002940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 779
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e92e9b0e2fcffc0800000000000000
+      internalID: -3459623366722150880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 767
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1253ca57daa4cbd00800000000000000
+      internalID: 989748126978684193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 767
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6870d40d4d3c85b00800000000000000
+      internalID: 817618651162937222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 765
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8e79d5269bf8bc0800000000000000
+      internalID: -3778597730212386605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 770
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56efa7db2b1ceef90800000000000000
+      internalID: -6922382603794579867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 767
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9955fd566cd216580800000000000000
+      internalID: -8835730663788292711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_9
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 770
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825a5a73a90bd5f60800000000000000
+      internalID: 8024764287449146664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 771
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6427fee221dca3670800000000000000
+      internalID: 8519347123105264198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_11
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 768
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d961c5b3e5b59310800000000000000
+      internalID: 1411234047862073816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_12
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 771
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8a5ef0e22386330800000000000000
+      internalID: 3704265866928826529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_13
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 766
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faae88e5f9ace86f0800000000000000
+      internalID: -680383707851724113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 488
+        width: 304
+        height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bc40898eddf8ed0800000000000000
+      internalID: -2409463284567323805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_15
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 488
+        width: 304
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf662fccd3b730e60800000000000000
+      internalID: 7927315274463864571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_16
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 731
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6040de6372e1770800000000000000
+      internalID: 8583341056672925393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_17
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 728
+        width: 73
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5dc8494f1c97930800000000000000
+      internalID: 4141554588552320416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 713
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454383aebde761580800000000000000
+      internalID: -8856752134185012140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_19
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 713
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d242b549e95243f0800000000000000
+      internalID: -918072515598597417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_20
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 713
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28da2ea9b5c50e050800000000000000
+      internalID: 5827759466327747970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_21
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 713
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9803b5fe76eb60870800000000000000
+      internalID: 8648809488018256009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_22
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 695
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ad88566ec190bf0800000000000000
+      internalID: -357722919527720333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_23
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 568
+        width: 210
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29de879af1c839e0800000000000000
+      internalID: -1641348782147839702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_24
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 621
+        width: 138
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c33c3ce4720cdc30800000000000000
+      internalID: 4385382838354850759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_25
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 639
+        width: 49
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85961971d62897120800000000000000
+      internalID: 2412102480492063064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 639
+        width: 48
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5534361c42cbd28a0800000000000000
+      internalID: -6328195035336326315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_27
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 679
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c9c50a75196c1e0800000000000000
+      internalID: -2177893564248449946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_28
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 686
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec12f496cfb0bff20800000000000000
+      internalID: 3457370317663445454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_29
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 668
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794c7350778482c00800000000000000
+      internalID: 876029803549410455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_30
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 686
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5d082a74117b500800000000000000
+      internalID: 411816890294392245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_31
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 668
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f933928ba5d6d2b0800000000000000
+      internalID: -5560021757335488015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_32
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 649
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8aac7bad2a979fe0800000000000000
+      internalID: -1182306856220185973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_33
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 636
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636737139dcd11190800000000000000
+      internalID: -7993365038210255306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_34
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 630
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe3b65660c1e62f0800000000000000
+      internalID: -977813255295910213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_35
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 631
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c31920f9d076410800000000000000
+      internalID: 1470158779953790030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_36
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 558
+        width: 103
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ec69f54673023e0800000000000000
+      internalID: -2080602123605193099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_37
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 639
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ee162ee80a2df70800000000000000
+      internalID: 9210600723469954564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_38
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 654
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0173324edab7dbae0800000000000000
+      internalID: -1531932311449028848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_39
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 626
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aee7769db9214560800000000000000
+      internalID: 7296158765566914215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_40
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 607
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad20f6b9702ceca30800000000000000
+      internalID: 4237537637330518746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_41
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 604
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2058a34fbadd91860800000000000000
+      internalID: 7501270384968893698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_42
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 606
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd87512bb94e5f00800000000000000
+      internalID: 1107403626446818805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_43
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 554
+        width: 48
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0b17b488459c850800000000000000
+      internalID: 6397737690014527686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_44
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 554
+        width: 49
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29375a3a048805dc0800000000000000
+      internalID: -3652269486592658542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_45
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 574
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9222e2fd8ef68cc0800000000000000
+      internalID: -3708997357474274660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_46
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 561
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d89ee8a23f2084f0800000000000000
+      internalID: -828610436807092016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_47
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 555
+        width: 15
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c6a34c566eb5770800000000000000
+      internalID: 8600721238152342546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 556
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da66b2fd0b7c94b0800000000000000
+      internalID: -5432331750678828332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_49
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 593
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc47a6801f596ef0800000000000000
+      internalID: -114455790938010420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_50
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 586
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3f00a09b4ff6de0800000000000000
+      internalID: -1337581488731786291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_51
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 580
+        width: 68
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2745dd570ff6b30800000000000000
+      internalID: 4282906159667770028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_52
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 506
+        width: 65
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1fa6e55eaedb9b0800000000000000
+      internalID: -5062632135242092079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_53
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 554
+        width: 68
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b17390ba0370860800000000000000
+      internalID: 7496013615933627230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_54
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 503
+        width: 65
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4245c8bc65024c8a0800000000000000
+      internalID: -6285863622748122076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_55
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 528
+        width: 68
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844a59422ae08e160800000000000000
+      internalID: 7054904905837159496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 457
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea62f6d2ac0afb8e0800000000000000
+      internalID: -1675443746152438098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_57
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 457
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134153c4044de6c70800000000000000
+      internalID: 8966337280762778673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_58
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 457
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bba74f6a1120060800000000000000
+      internalID: 6918111386358430564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_59
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 460
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2505b27da6b09d0800000000000000
+      internalID: -2807032470358174987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_60
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 460
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d9a2a3cd1744c60800000000000000
+      internalID: 7801485645195156844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_61
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 460
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a07e2acc4ced690800000000000000
+      internalID: -7575401140005172609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_62
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 70
+        width: 338
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1586fabfef8702460800000000000000
+      internalID: 7214899639587137617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_63
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 71
+        width: 338
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747f88a7fdbbac0d0800000000000000
+      internalID: -3401700000017090745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_64
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 17
+        width: 338
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0525161e8a7ac2ec0800000000000000
+      internalID: -3590310459143531952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spring32_sprites_65
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 21
+        width: 521
+        height: 411
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d0ae644a36a3c70800000000000000
+      internalID: 8951576766567812385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

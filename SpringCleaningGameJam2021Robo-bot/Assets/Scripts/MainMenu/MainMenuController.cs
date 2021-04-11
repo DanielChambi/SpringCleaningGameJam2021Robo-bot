@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     public Button startButton;
 
-    string firstGameScene = "Scenes/BulletHell/BulletHellScene";
+    string firstGameScene = "Scenes/Introvideo";
 
     void Start()
     {
@@ -27,11 +27,15 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator LoadFirstGameScene()
     {
+
         AsyncOperation Asyncload = SceneManager.LoadSceneAsync(firstGameScene, LoadSceneMode.Single);
 
         while( !Asyncload.isDone)
         {
             yield return null;
         }
+        
     }
+
+    
 }

@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: ecb375a2d1a4a6d459ece8b19be81786
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7416136017777429359
+    second: BHBackground_0
+  - first:
+      213: 2806260191265968398
+    second: BHBackground_1
+  - first:
+      213: 5162269526322207894
+    second: BHBackground_2
+  - first:
+      213: -458848988311730659
+    second: BHBackground_3
+  - first:
+      213: 5236794960421330775
+    second: BHBackground_4
+  - first:
+      213: 8322736704444457931
+    second: BHBackground_5
+  - first:
+      213: -1764866199370053095
+    second: BHBackground_6
+  - first:
+      213: 3442256880220347687
+    second: BHBackground_7
+  - first:
+      213: 7054843280313887806
+    second: BHBackground_8
+  - first:
+      213: 94552454743053403
+    second: BHBackground_9
+  - first:
+      213: 5507028433481285540
+    second: BHBackground_10
+  - first:
+      213: -4074669672735278349
+    second: BHBackground_11
+  - first:
+      213: -2932943644835014047
+    second: BHBackground_12
+  - first:
+      213: 1445241814925508018
+    second: BHBackground_13
+  - first:
+      213: -7625981781323084757
+    second: BHBackground_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BHBackground_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1651
+        width: 480
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b8a917a686be660800000000000000
+      internalID: 7416136017777429359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_1
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1651
+        width: 480
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e015ab796c6d1f620800000000000000
+      internalID: 2806260191265968398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_2
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1653
+        width: 480
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c524788c014a740800000000000000
+      internalID: 5162269526322207894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_3
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1651
+        width: 480
+        height: 689
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16c126b647d1a9f0800000000000000
+      internalID: -458848988311730659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_4
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 1653
+        width: 480
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f18715545dca840800000000000000
+      internalID: 5236794960421330775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_5
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1655
+        width: 479
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3648bdfec408370800000000000000
+      internalID: 8322736704444457931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_6
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 1655
+        width: 480
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a4476da8fe187e0800000000000000
+      internalID: -1764866199370053095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 909
+        width: 480
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d9d2b056a55cf20800000000000000
+      internalID: 3442256880220347687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_8
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 909
+        width: 480
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c2925d596d7e160800000000000000
+      internalID: 7054843280313887806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_9
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 917
+        width: 480
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54d995e4faef4100800000000000000
+      internalID: 94552454743053403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_10
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 909
+        width: 480
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afb0a9ce25ec6c40800000000000000
+      internalID: 5507028433481285540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_11
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 904
+        width: 479
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa7e8b658dd377c0800000000000000
+      internalID: -4074669672735278349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_12
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 904
+        width: 481
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a9e5f5b471c47d0800000000000000
+      internalID: -2932943644835014047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_13
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 919
+        width: 480
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdfc2106c78e0410800000000000000
+      internalID: 1445241814925508018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BHBackground_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 161
+        width: 479
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c03ac59f11b2690800000000000000
+      internalID: -7625981781323084757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
