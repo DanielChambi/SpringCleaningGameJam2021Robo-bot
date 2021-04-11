@@ -27,11 +27,15 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator LoadFirstGameScene()
     {
+
         AsyncOperation Asyncload = SceneManager.LoadSceneAsync(firstGameScene, LoadSceneMode.Single);
 
         while( !Asyncload.isDone)
         {
             yield return null;
         }
+        
     }
+
+    
 }
