@@ -8,7 +8,7 @@ public class BHPlayer : MonoBehaviour
     public float max_speed = 5;
     public float acceleration = 1;
 
-    public float hpMax = 20; 
+    public float hpMax = 10; 
     public float hp;
 
     public float shootDelay = 10f; //delay between shots in seconds
@@ -117,11 +117,18 @@ public class BHPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //detect collision with enemy projectiles and recive damage it deals
-        if(collision.transform.tag == "EnemyProjectile" && !invincible)
+        if(!invincible)
         {
-            BHProjectile projectile = collision.transform.GetComponent<BHProjectile>();
-            ReceiveDamage(projectile.Damage());
-            Destroy(collision.transform.gameObject);
+            if(collision.transform.tag == "EnemyProjectile")
+            {
+                BHProjectile projectile = collision.transform.GetComponent<BHProjectile>();
+                ReceiveDamage(projectile.Damage());
+                Destroy(collision.transform.gameObject);
+
+            } else if(collision.transform.tag == "Enemy")
+            {
+                ReceiveDamage(2);
+            }
         }
     }
 

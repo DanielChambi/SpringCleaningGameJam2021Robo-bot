@@ -70,7 +70,7 @@ public class BHEnemyBoss : BHEnemy
     {
         animator = GetComponent<Animator>();      
 
-        hpMax = 100;
+        hpMax = 1250;
         hp = hpMax;
 
         midPointPercentage = 0.4f;

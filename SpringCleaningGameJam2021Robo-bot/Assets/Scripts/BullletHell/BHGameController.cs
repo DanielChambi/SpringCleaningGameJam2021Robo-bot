@@ -47,7 +47,14 @@ public class BHGameController : MonoBehaviour
     
     private void OnGUI()
     {
-        playerHp.text = player.GetComponent<BHPlayer>().HpToString();
+        if(player != null)
+        {
+            playerHp.text = player.GetComponent<BHPlayer>().HpToString();
+        } else
+        {
+            playerHp.text = "0 / 0";
+        }
+        
     }
 
     IEnumerator BlackOutFadeIn()

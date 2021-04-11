@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 702648751}
   m_Layer: 0
   m_Name: BossSprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_speed: 10
   acceleration: 2
-  hpMax: 20
+  hpMax: 10
   hp: 20
   shootDelay: 0.1
   currentProjectile: {fileID: 8714129952044106600, guid: 92eb74c1866fb9d47b996b80ee246db6, type: 3}
@@ -2086,9 +2086,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.02}
   serializedVersion: 2
-  m_Radius: 0.19
+  m_Radius: 0.17
 --- !u!212 &1606343065
 SpriteRenderer:
   m_ObjectHideFlags: 0
